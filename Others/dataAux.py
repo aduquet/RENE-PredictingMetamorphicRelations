@@ -44,7 +44,6 @@ def dsFinal(methodsName, df):
     return df
 
 def save_csv(df, output):
-
     df = df.sort_values(by='Method Name', ascending=True)
     df.to_csv(output + '.csv')
 
