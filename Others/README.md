@@ -1,4 +1,4 @@
-dataAux.py checks consistency between method names in "DS_JK dataset / dot files" and listMeth_labelsMR.csv 
+dataAux.py checks consistency between method names in "DS_JK dataset / dot files" and listMeth_labelsMR.csv wich contains the labels of the Metamorphic Relation (MR). We use the number 1 to denote a method that satisfies a given MR, and  0 to denote a method that does not fulfil a particular MR. 
 
 It can be executed from the terminal:
 
