@@ -24,9 +24,8 @@ def methNames(dot_path):
 def dsFinal(methodsName, df):
 
     df['same'] = 'NO'
-    
-    for index, row in df.iterrows():
 
+    for index, row in df.iterrows():
         mName = row.at['Method Name']
         if mName in methodsName:
             df.at[index, 'same'] = 'yes'
@@ -44,10 +43,10 @@ def dsFinal(methodsName, df):
 
     return df
 
-def save_csv(df):
+def save_csv(df, output):
 
     df = df.sort_values(by='Method Name', ascending=True)
-    df.to_csv('ds_labelled.csv')
+    df.to_csv(output + '.csv')
 
 
 if __name__ == '__main__':
@@ -55,8 +54,9 @@ if __name__ == '__main__':
 
     @click.command()
     @click.option('-i', '--file', 'input', help='Path file')
+    @click.option('-o', '--outFile', 'output', help='name csv')
 
-    def main(input):
+    def main(input, output):
 
        here_iam = str(pathlib.Path().absolute())
        dot_path = gl.glob(input)
@@ -64,6 +64,6 @@ if __name__ == '__main__':
        methodsName = methNames(dot_path)
        # print(methodsName)
        finalDataLabelled = dsFinal(methodsName, data)
-       save_csv(finalDataLabelled)
+       save_csv(finalDataLabelled, output)
 
 main()
