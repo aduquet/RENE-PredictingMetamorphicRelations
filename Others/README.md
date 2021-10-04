@@ -4,4 +4,6 @@ It can be executed from the terminal:
 
         Python dataAux.py -i Path_to_DS-JK-Dataset\* -o Dataset_name
 
-It'll return a csv file        
+It'll return a csv file with the name Dataset_name.csv (-o option) 
+
+
