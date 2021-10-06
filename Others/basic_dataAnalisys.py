@@ -5,8 +5,8 @@ import pandas as pd
 import numpy as np
 import collections
 
-fsize = 10
-tsize = 10
+fsize = 12
+tsize = 12
 tdir = 'in'
 major = 5.0
 minor = 3.0
@@ -22,7 +22,7 @@ plt.rcParams['xtick.major.size'] = major
 plt.rcParams['xtick.minor.size'] = minor
 plt.rcParams['ytick.major.size'] = major
 plt.rcParams['ytick.minor.size'] = minor
-plt.rcParams["figure.figsize"] = (6, 5)
+plt.rcParams["figure.figsize"] = (6, 6)
 plt.rcParams['legend.handlelength'] = 0.5
 
 
@@ -61,8 +61,8 @@ def def_plot(df):
     ax.set_xticklabels(names)
 
     plt.xlabel("Metamorphic relations")
-    plt.ylabel("Count")
-    plt.legend(('Does apply','Does not apply'), fancybox=True, shadow=True, ncol=2,  bbox_to_anchor=(0.5, 1.05), loc='upper center')
+    plt.ylabel("Number of Methods")
+    plt.legend(('Does satisfy','Does not satisfy'), fancybox=True, shadow=True, ncol=2,  bbox_to_anchor=(0.5, 1.05), loc='upper center')
     plt.savefig("Total number of methods that satisfies or non-satisfies each metamorphic relation.pdf")
     plt.show()
 
@@ -184,7 +184,7 @@ if __name__ == '__main__':
         df = pd.read_csv(input)
 
         def_plot(df)
-        counter_MRs(df)
+        #counter_MRs(df)
 
 
 
