@@ -6,7 +6,7 @@ import numpy as np
 import collections
 
 fsize = 12
-tsize = 12
+tsize = 10
 tdir = 'in'
 major = 5.0
 minor = 3.0
@@ -22,7 +22,7 @@ plt.rcParams['xtick.major.size'] = major
 plt.rcParams['xtick.minor.size'] = minor
 plt.rcParams['ytick.major.size'] = major
 plt.rcParams['ytick.minor.size'] = minor
-plt.rcParams["figure.figsize"] = (6, 6)
+plt.rcParams["figure.figsize"] = (6, 5)
 plt.rcParams['legend.handlelength'] = 0.5
 
 
