@@ -1,0 +1,8 @@
+,Num_MRs,methodName,Total methods,Total_MRs,ADD,MUL,PER,INC,EXC,INV
+0,0,"['autoCorrelation', 'cal_Diff', 'check_eq_tolerance', 'check_equal', 'clip', 'dec', 'ebeDivide', 'ebeSubtract', 'elemtWise_equal', 'elemtWise_not_eq', 'equals', 'errorRate', 'eval_Internal', 'find_diff', 'mean_Diff', 'partition', 'sum_Power_Deviat', 'sum_labeled', 'tanimotoDist', 'weightedRMS']",20,0,0,0,0,0,0,0
+1,1,"['bi_SearchFromTo', 'cal_DividedDiff', 'cosineDist', 'covariance', 'durbinWatson', 'evalNewton', 'lag', 'sampleWeightedVar']",8,8,2,3,0,2,0,1
+2,2,"['chiSquare', 'meanDeviation', 'mean_abs_error', 'power', 'sampleSkew', 'sequential_search', 'standardize']",7,14,3,4,2,1,1,3
+3,3,"['array_calc', 'array_copy', 'cal_AbsoluteDiff', 'canberraDist', 'cnt_zeroes', 'count_k', 'dec_array', 'ebeAdd', 'ebeMultiply', 'elemtWise_max', 'elemtWise_min', 'hamming_dist', 'kurtosis', 'reverse', 's_add', 'sampleKurtosis', 'scale', 'set_min_val', 'skew', 'square', 'var_Difference', 'weightedMean', 'weighted_average']",23,69,19,17,5,5,5,18
+4,4,"['average', 'bubble', 'chebyshevDist', 'checkNonNegative', 'checkPositive', 'dist', 'distInf', 'euc_Dist', 'find_euc_Dist', 'find_median', 'find_min', 'g_Test', 'geometric_mean', 'harmonicMean', 'insertion_sort', 'manhattanDist', 'manhattanDist2', 'min', 'pooledMean', 'pooledVariance', 'quantile', 'sampleVariance', 'selection_sort', 'shell_sort', 'variance', 'winsorizedMean']",26,104,16,26,16,10,10,26
+5,5,"['dot_product', 'entropy', 'evalWeightedProd', 'evaluateHoners', 'find_max2', 'get_array_value', 'polevl']",7,35,7,7,1,7,7,6
+6,6,"['add_values', 'count_non_zeroes', 'find_magnitude', 'find_max', 'max', 'product', 'safeNorm', 'sum', 'sumOfLogarithms']",9,54,9,9,9,9,9,9
