@@ -29,12 +29,21 @@ def check_methodsNames(df_f, df_mr):
 
     methods_name = list(df_mr['Method_Name'])
 
-    isNot = []
+    columNameMR = list(df_mr.columns.values)
+    for i in columNameMR:
+        if i.find('MR_') != -1:
+            df_f[i] = np.nan
 
-    
-
+    for index, row in df_mr.iterrows():
+        name = row.at['Method_Name']
+        
+        match = list(df_f['dot_name'].str.match(name)).index(True)
+        index_keys = list(row.keys())
+        for j in index_keys:
+            df_f.at[match, j] = row.at[j]
     print(df_mr)
     print(df_f)
+    df_f.to_csv('test.csv')
 
 
 
