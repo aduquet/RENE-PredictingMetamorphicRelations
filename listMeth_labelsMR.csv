@@ -1,4 +1,4 @@
-Method_Name,ADD,MUL,PER,INC,EXC,INV
+Method_Name,MR_ADD,MR_MUL,MR_PER,MR_INC,MR_EXC,MR_INV
 add_values,1,1,1,1,1,1
 array_calc,1,1,0,0,0,1
 array_copy,1,1,0,0,0,1
