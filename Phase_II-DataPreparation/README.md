@@ -2,7 +2,7 @@ This directory contains the scripts to perform the phase II of PMR, i.e., "Phase
 
 Overall, phase II is in charge of extracting a set of features from the CFGs (Control Flow Graph). Also, to each method’s CFG zero to six pre-defined MRs are assigned.
 
-The script _**Requirements.py**_ The Requirements.py script will install all the necessary libraries and dependencies for the  _**featureExtractor-Node_Paths.py**_, _**featureExtractor-RWK.py**_, _**featureExtractor-GK.py**_, and _**MR_labeller.py**_ scripts. We suggest using Anaconda Prompt
+The script _**Requirements.py**_ will install all the necessary libraries and dependencies for the  _**featureExtractor-Node_Paths.py**_, _**featureExtractor-RWK.py**_, _**featureExtractor-GK.py**_, and _**MR_labeller.py**_ scripts. We suggest using Anaconda Prompt
 
 To execute _**Requirements.py**_ follow the command line:
 	
@@ -60,4 +60,9 @@ If the list of MRs contains less number of methods than the features file (check
 	*** WARNING: The number of rows is not the same. 
 	If there are empty spaces, they will be filled with NaN *** 
 
- 
+ The csv files used in our paper **"A Replication Study on Predicting MetamorphicRelations at Unit Testing Level"** are:
+ 	
+	NodePath_Features\NF-PF_DS-JK.csv
+	Labelled-Dataset\NF-PF_DS_JK-labelled.csv
+	
+	
