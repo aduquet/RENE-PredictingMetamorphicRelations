@@ -1,8 +1,6 @@
 import os
-import sys
 import pathlib
 import warnings
-import glob as gl
 import numpy as np
 import pandas as pd
 
@@ -19,15 +17,13 @@ def checkUnnameColumn(df):
     
     return df
 
-def check_methodsNames(df_f, df_mr):
+def labeller(df_f, df_mr):
 
     df_f = checkUnnameColumn(df_f)
     df_mr = checkUnnameColumn(df_mr)
 
     if len(df_mr) != len(df_f):
-        print('WARNING: The number of rows is not the same')
-
-    methods_name = list(df_mr['Method_Name'])
+        print('\n *** WARNING: The number of rows is not the same. \n If there are empty spaces, they will be filled with NaN *** \n')
 
     columNameMR = list(df_mr.columns.values)
     for i in columNameMR:
@@ -41,10 +37,20 @@ def check_methodsNames(df_f, df_mr):
         index_keys = list(row.keys())
         for j in index_keys:
             df_f.at[match, j] = row.at[j]
-    print(df_mr)
-    print(df_f)
-    df_f.to_csv('test.csv')
+    # print(df_mr)
+    # print(df_f)
+    df_f = df_f.fillna("NaN")
+    
+    return df_f
 
+def saveFile(df, path, output):
+
+    if output.find('.') != -1:
+        output = output.split('.')[0]
+    
+    finalPath = path + '\\' + output + '.csv'
+    df.to_csv(finalPath)
+    print('\n DONE! File saved in: \n ', finalPath )
 
 
 if __name__ == '__main__':
@@ -70,8 +76,8 @@ if __name__ == '__main__':
         df_f = pd.read_csv(f_file)
         df_mr = pd.read_csv(mr_file)
 
-        check_methodsNames(df_f, df_mr)
-
+        labelled_dataset = labeller(df_f, df_mr)
+        saveFile(labelled_dataset, resultsPath, output_file)
     
 main()
 
