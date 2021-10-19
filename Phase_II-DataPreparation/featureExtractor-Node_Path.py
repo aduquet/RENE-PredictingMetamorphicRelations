@@ -1,17 +1,13 @@
 import os
-import sys
 import pathlib
 import warnings
-import itertools
 import glob as gl
 from collections import defaultdict
 
-import pygraphviz
 import numpy as np
 import pandas as pd
 import networkx as nx
 import nx_pydot as pydot
-import matplotlib.pyplot as plt
 
 import networkx.algorithms.simple_paths as simple_paths
 
@@ -356,10 +352,10 @@ if __name__ == '__main__':
 
         df_main = df_main.fillna(0)
         
-        if output_file.find('.csv') == -1:
-            output_file = output_file + '.csv'
+        if output_file.find('.') != -1:
+            output_file = output_file.split('.')[0]
 
-        resultsPath = resultsPath + '\\' + output_file
+        resultsPath = resultsPath + '\\' + output_file + '.csv'
         df_main.to_csv(resultsPath)
         print('\n Done! The file has been saved in: ', resultsPath )
 
