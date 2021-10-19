@@ -1,7 +1,7 @@
 
 
-public class check_equal_tolerance {
-    public static boolean check_equal_tolerance(Double[] a, Double[] b, Double tol) {
+public class check_eq_tolerance {
+    public static boolean check_eq_tolerance_m(Double[] a, Double[] b, Double tol) {
         if (a.length != b.length) {
             return false;
         }

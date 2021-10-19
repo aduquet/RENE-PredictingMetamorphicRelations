@@ -1,7 +1,7 @@
 
 
 public class variance {
-    public static double variance(Double[] x) {
+    public static double variance_m(Double[] x) {
         double sum = 0;
         double sum1 = 0;
         double var = 0;

@@ -1,7 +1,7 @@
 
 
 public class sampleKurtosis {
-    public static double sampleKurtosis(Integer size, Double moment4, Double sampleVariance) {
+    public static double sampleKurtosis_m(Integer size, Double moment4, Double sampleVariance) {
         int n = size;
         double s2 = sampleVariance;
         double m4 = moment4 * n;

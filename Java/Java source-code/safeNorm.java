@@ -1,7 +1,7 @@
 
 
 public class safeNorm {
-    public static double safeNorm(Double[] v) {
+    public static double safeNorm_m(Double[] v) {
         double rdwarf = 3.834e-20;
         double rgiant = 1.304e+19;
         double s1 = 0;

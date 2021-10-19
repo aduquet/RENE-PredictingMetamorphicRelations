@@ -1,7 +1,7 @@
 
 
 public class quantile {
-    public static double quantile(Double[] sortedElements, Double phi) {
+    public static double quantile_m(Double[] sortedElements, Double phi) {
         int n = sortedElements.length;
         double index = phi * (n - 1);
         int lhs = (int) index;

@@ -1,7 +1,7 @@
 
 
 public class kurtosis {
-    public static double kurtosis(Double[] data) {
+    public static double kurtosis_m(Double[] data) {
         double sum = 0;
         double sumPD = 0;
         double sumSq = 0;

@@ -1,7 +1,7 @@
 
 
 public class covariance {
-    public static double covariance(Double[] elements1, Double[] elements2) {
+    public static double covariance_m(Double[] elements1, Double[] elements2) {
         int size = elements1.length;
         double sumx = elements1[0];
         double sumy = elements2[0];

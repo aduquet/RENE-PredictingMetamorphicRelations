@@ -1,7 +1,7 @@
 
 
 public class shell_sort {
-    public static Integer[] shell_sort(Integer[] a) {
+    public static Integer[] shell_sort_m(Integer[] a) {
         int j;
         int i;
         int k;

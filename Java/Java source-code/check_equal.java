@@ -1,7 +1,7 @@
 
 
 public class check_equal {
-    public static boolean check_equal(Integer[] a, Integer[] b) {
+    public static boolean check_equal_m(Integer[] a, Integer[] b) {
         if (a.length != b.length) {
             return false;
         }

@@ -1,7 +1,7 @@
 
 
-public class manhattan_dist {
-    public static double manhattan_dist(Integer[] a, Integer[] b) {
+public class manhattanDist {
+    public static double manhattanDist_m(Integer[] a, Integer[] b) {
         int i;
         double sum = 0;
         for (i = 0; i < a.length; i++) {

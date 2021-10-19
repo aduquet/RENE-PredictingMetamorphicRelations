@@ -1,7 +1,7 @@
 
 
 public class ebeSubtract {
-        public static Double[] ebeSubtract(Double[] a, Double[] b) {
+        public static Double[] ebeSubtract_m(Double[] a, Double[] b) {
                 if (a.length != b.length) {
                         return null;
                 }

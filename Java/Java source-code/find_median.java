@@ -1,7 +1,7 @@
 
 
 public class find_median {
-    public static double find_median(Integer[] a) {
+    public static double find_median_m(Integer[] a) {
         int k = a.length / 2 + 1;
         int minIndex = 0;
         int minValue = a[0];

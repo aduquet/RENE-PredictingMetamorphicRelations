@@ -1,7 +1,7 @@
 
 
 public class entropy {
-    public static double entropy(final Double[] k) {
+    public static double entropy_m(final Double[] k) {
         double h = 0d;
         double sum_k = 0d;
         for (int i = 0; i < k.length; i++) {

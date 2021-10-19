@@ -1,7 +1,7 @@
 
 
-public class evaluateInternal {
-    public static double evaluateInternal(Double[] x, Double[] y, Double z) {
+public class eval_Internal {
+    public static double eval_Internal_m(Double[] x, Double[] y, Double z) {
         int nearest = 0;
         final int n = x.length;
         final double[] c = new double[n];

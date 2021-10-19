@@ -1,7 +1,7 @@
 
 
-public class varianceDifference {
-    public static double varianceDifference(final Double[] sample1, final Double[] sample2) {
+public class var_Difference {
+    public static double var_Difference_m(final Double[] sample1, final Double[] sample2) {
         double sum1 = 0d;
         double sum2 = 0d;
         double diff = 0d;

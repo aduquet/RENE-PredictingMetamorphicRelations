@@ -1,7 +1,7 @@
 
 
-public class calculateAbsoluteDifferences {
-        public static double[] calculateAbsoluteDifferences(Double[] z) {
+public class cal_AbsoluteDiff{
+        public static double[] cal_AbsoluteDiff_m(Double[] z) {
                 if (z == null) {
                         return null;
                 }

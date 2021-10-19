@@ -1,7 +1,7 @@
 
 
 public class polevl {
-    public static double polevl(Double x, Double[] coef, Integer N)
+    public static double polevl_m(Double x, Double[] coef, Integer N)
             throws ArithmeticException {
         double ans;
         ans = coef[0];

@@ -1,7 +1,7 @@
 
 
 public class pooledVariance {
-    public static double pooledVariance(Double[] data1, Double[] data2) {
+    public static double pooledVariance_m(Double[] data1, Double[] data2) {
         double sum1 = 0;
         double sumSq1 = 0;
         for (int i = 0; i < data1.length; i++) {

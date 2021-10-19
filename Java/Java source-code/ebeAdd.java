@@ -1,7 +1,7 @@
 
 
 public class ebeAdd {
-        public static Double[] ebeAdd(Double[] a, Double[] b) {
+        public static Double[] ebeAdd_m(Double[] a, Double[] b) {
                 if (a.length != b.length) {
                         return null;
                 }

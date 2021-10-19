@@ -1,7 +1,7 @@
 
 
 public class weighted_average {
-    public static double weighted_average(Double[] a, Double[] b) {
+    public static double weighted_average_m(Double[] a, Double[] b) {
         double sum1 = 0;
         double sum2 = 0;
         for (int i = 0; i < a.length; i++) {

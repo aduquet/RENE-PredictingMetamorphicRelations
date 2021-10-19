@@ -1,7 +1,7 @@
 
 
 public class standardize {
-    public static Double[] standardize(Double[] data) {
+    public static Double[] standardize_m(Double[] data) {
         double sum = 0;
         double sumSq = 0;
         for (int i = 0; i < data.length; i++) {

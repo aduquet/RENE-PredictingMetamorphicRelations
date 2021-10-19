@@ -1,7 +1,7 @@
 
 
 public class skew {
-    public static double skew(Double[] data) {
+    public static double skew_m(Double[] data) {
         double sum = 0;
         double sumPD = 0;
         double sumSq = 0;

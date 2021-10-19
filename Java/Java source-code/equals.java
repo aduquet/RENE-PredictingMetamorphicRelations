@@ -1,7 +1,7 @@
 
 
 public class equals {
-    public static boolean equals(Double[] x, Double[] y) {
+    public static boolean equals_m(Double[] x, Double[] y) {
         if (x == null || y == null) {
             return !(x == null ^ y == null);
         }

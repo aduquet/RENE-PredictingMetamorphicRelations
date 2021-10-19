@@ -1,7 +1,7 @@
 
 
-public class sampleWeightedVariance {
-    public static double sampleWeightedVariance(Double[] data, Double[] weights) {
+public class sampleWeightedVar {
+    public static double sampleWeightedVar_m(Double[] data, Double[] weights) {
         double sumOfWeights = 0;
         double sumOfProducts = 0;
         double sumOfSquaredProducts = 0;

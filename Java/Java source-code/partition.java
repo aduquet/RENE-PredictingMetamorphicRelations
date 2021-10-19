@@ -1,7 +1,7 @@
 
 
 public class partition {
-        public static int partition(final Double[] work, final Integer begin, final Integer end, final Integer pivot) {
+        public static int partition_m(final Double[] work, final Integer begin, final Integer end, final Integer pivot) {
                 final double value = work[pivot];
                 work[pivot] = work[begin];
                 int i = begin + 1;

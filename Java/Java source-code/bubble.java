@@ -1,7 +1,7 @@
 
 
 public class bubble {
-    public static Integer[] bubble(Integer[] a) {
+    public static Integer[] bubble_m(Integer[] a) {
         int i;
         int j;
         int t;

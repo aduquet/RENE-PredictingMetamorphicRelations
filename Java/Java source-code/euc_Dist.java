@@ -1,5 +1,5 @@
-public class euclidianDistance {
-    public static double calculateDistance(double[] array1, double[] array2)
+public class euc_Dist {
+    public static double euc_Dist_m(double[] array1, double[] array2)
     {
         double Sum = 0.0;
         for(int i=0;i<array1.length;i++) {

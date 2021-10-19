@@ -1,7 +1,7 @@
 
 
-public class chebyshevDistance {
-    public static double chebyshevDistance(Double[] p1, Double[] p2) {
+public class chebyshevDist {
+    public static double chebyshevDist_m(Double[] p1, Double[] p2) {
         if (p1.length != p2.length) {
             System.out.println("Error!");
             return -1;

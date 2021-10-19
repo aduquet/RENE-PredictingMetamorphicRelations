@@ -1,7 +1,7 @@
 
 
 public class weightedRMS {
-    public static double weightedRMS(Double[] data, Double[] weights) {
+    public static double weightedRMS_m(Double[] data, Double[] weights) {
         double sumOfProducts = 0;
         double sumOfSquaredProducts = 0;
         for (int i = 0; i < data.length; i++) {

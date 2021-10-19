@@ -1,7 +1,7 @@
 
 
 public class selection_sort {
-    public static Integer[] selection_sort(Integer[] list) {
+    public static Integer[] selection_sort_m(Integer[] list) {
         int i;
         int j;
         int min;

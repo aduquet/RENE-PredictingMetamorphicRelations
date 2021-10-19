@@ -1,5 +1,5 @@
-public class computeDividedDifference {
-    public static double[] computeDividedDifference(final double x[], final double y[]) {
+public class cal_DividedDiff {
+    public static double[] cal_DividedDiff_m(final double x[], final double y[]) {
         final double[] divdiff = y.clone();
         final int n = x.length;
         final double[] a = new double[n];

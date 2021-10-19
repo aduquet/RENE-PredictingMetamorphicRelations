@@ -1,7 +1,7 @@
 
 
 public class insertion_sort {
-    public static Integer[] insertion_sort(Integer[] array) {
+    public static Integer[] insertion_sort_m(Integer[] array) {
         for (int i = 1; i < array.length; i++) {
             int j = i;
             int B = array[i];

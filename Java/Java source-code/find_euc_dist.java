@@ -1,7 +1,7 @@
 
 
-public class find_euc_dist {
-    public static double find_euc_dist(Integer[] a, Integer[] b) {
+public class find_euc_Dist {
+    public static double find_euc_Dist_m(Integer[] a, Integer[] b) {
         int i;
         double sum = 0;
         for (i = 0; i < a.length; i++) {

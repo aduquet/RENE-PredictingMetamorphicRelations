@@ -1,7 +1,7 @@
 
 
-public class tanimotoDistance {
-    public static double tanimotoDistance(Double[] p1, Double[] p2) {
+public class tanimotoDist {
+    public static double tanimotoDist_m(Double[] p1, Double[] p2) {
         double ab = 0;
         double aSq = 0;
         double bSq = 0;

@@ -1,7 +1,7 @@
 
 
 public class sampleVariance {
-    public static double sampleVariance(Double[] elements, Double mean) {
+    public static double sampleVariance_m(Double[] elements, Double mean) {
         int size = elements.length;
         double sum = 0;
         for (int i = size; --i >= 0; ) {

@@ -1,7 +1,7 @@
 
 
 public class ebeDivide {
-        public static Double[] ebeDivide(Double[] a, Double[] b) {
+        public static Double[] ebeDivide_m(Double[] a, Double[] b) {
                 if (a.length != b.length) {
                         return null;
                 }

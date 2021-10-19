@@ -1,7 +1,5 @@
-
-
-public class binarySearchFromTo {
-    public static int binarySearchFromTo(Double[] elements, Double key, Integer from, Integer to) {
+public class bi_SearchFromTo {
+    public static int bi_SearchFromTo_m(Double[] elements, Double key, Integer from, Integer to) {
         int low = from;
         int high = to;
         while (low <= high) {

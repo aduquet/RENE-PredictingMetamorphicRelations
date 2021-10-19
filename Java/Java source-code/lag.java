@@ -1,7 +1,7 @@
 
 
-public class lag1 {
-    public static double lag1(Double[] elements, Double mean) {
+public class lag {
+    public static double lag_m(Double[] elements, Double mean) {
         int size = elements.length;
         double r1;
         double q = 0;

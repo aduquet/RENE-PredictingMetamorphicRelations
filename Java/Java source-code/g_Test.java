@@ -1,7 +1,7 @@
 
 
-public class g {
-    public static double g(final Double[] expected, final Double[] observed) {
+public class g_Test {
+    public static double g_Test_m(final Double[] expected, final Double[] observed) {
         double sumExpected = 0d;
         double sumObserved = 0d;
         for (int i = 0; i < observed.length; i++) {

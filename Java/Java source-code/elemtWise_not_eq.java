@@ -1,10 +1,10 @@
 
 
-public class elementwise_equal {
-    public static boolean[] elementwise_equal(Integer[] a, Integer[] b) {
+public class elemtWise_not_eq {
+    public static boolean[] elemtWise_not_eq_m(Integer[] a, Integer[] b) {
         boolean[] r = new boolean[a.length];
         for (int i = 0; i < a.length; i++) {
-            if (a[i] == b[i]) {
+            if (a[i] != b[i]) {
                 r[i] = true;
             } else {
                 r[i] = false;

@@ -1,7 +1,7 @@
 
 
-public class computeCanberraDistance {
-    public static double computeCanberraDistance(Double[] a, Double[] b) {
+public class canberraDist {
+    public static double canberraDist_m(Double[] a, Double[] b) {
         double sum = 0;
         for (int i = 0; i < a.length; i++) {
             final double num = Math.abs(a[i] - b[i]);

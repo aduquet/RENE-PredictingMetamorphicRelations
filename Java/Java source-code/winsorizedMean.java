@@ -1,7 +1,7 @@
 
 
 public class winsorizedMean {
-    public static double winsorizedMean(Double[] sortedElements, Integer left, Integer right) {
+    public static double winsorizedMean_m(Double[] sortedElements, Integer left, Integer right) {
         int N = sortedElements.length;
         double sum = 0;
         for (int i = 0; i < sortedElements.length; i++) {

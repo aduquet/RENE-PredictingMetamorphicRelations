@@ -1,7 +1,7 @@
 
 
 public class chiSquare {
-    public static double chiSquare(Double[] expected, Double[] observed) {
+    public static double chiSquare_m(Double[] expected, Double[] observed) {
         double sumExpected = 0d;
         double sumObserved = 0d;
         for (int i = 0; i < observed.length; i++) {

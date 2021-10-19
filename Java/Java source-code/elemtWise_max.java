@@ -1,7 +1,7 @@
 
 
-public class elementwise_max {
-    public static int[] elementwise_max(Integer[] a, Integer[] b) {
+public class elemtWise_max {
+    public static int[] elemtWise_max_m(Integer[] a, Integer[] b) {
         int[] r = new int[a.length];
         for (int i = 0; i < a.length; i++) {
             if (a[i] > b[i]) {
