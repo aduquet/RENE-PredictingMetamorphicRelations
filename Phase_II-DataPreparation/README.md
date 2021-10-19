@@ -2,9 +2,9 @@ This directory contains the scripts to perform the phase II of PMR, i.e., "Phase
 
 Overall, phase II is in charge of extracting a set of features from the CFGs (Control Flow Graph). Also, to each method’s CFG zero to six pre-defined MRs are assigned.
 
-The script _**Requirements.py**_ will install all the libraries and dependencies necessaries for the scripts _**featureExtractor-Node_Paths.py**_, _**featureExtractor-RWK.py**_, _**featureExtractor-GK.py**_, and _**MR_labeller.py**_
+The script _**Requirements.py**_ The Requirements.py script will install all the necessary libraries and dependencies for the  _**featureExtractor-Node_Paths.py**_, _**featureExtractor-RWK.py**_, _**featureExtractor-GK.py**_, and _**MR_labeller.py**_ scripts. We suggest using Anaconda Prompt
 
-To execute _**Requirements.py**_:
+To execute _**Requirements.py**_ follow the command line:
 	
 	Python Requirements.py
 
@@ -19,7 +19,7 @@ For more info about **_nx_pydot.py_** please visit
 
 The script _**featureExtractor-Node_Path.py**_, extracts features related to the CFG's nodes and paths. This script will create the directory _**NodePath_Features**_ (if is not created), and it will save a CSV file with the features extracted.   
 
-To executed _**featureExtractor-Node_Path.py**_ open Anaconda Prompt and type:
+To executed _**featureExtractor-Node_Path.py**_ open Anaconda Prompt and follow the command line:
 
 	Python featureExtractor-Node_Path.py -i "Path to the dot files" -o "Name of the csv file"
 
@@ -42,7 +42,7 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/42596938/137913149-5775901c-0184-496e-857d-51e0b8c3bec4.png)
 
-To executed _ ** MR_labeller.py ** _ open Anaconda Prompt and type:
+To executed _ ** MR_labeller.py ** _ open Anaconda Prompt and  follow the command line:
 
 	python MR_labeller.py -i "path to the features.csv file" -mr "path to the list of MRs csv file" -o " Name of the new csv file"
 	
