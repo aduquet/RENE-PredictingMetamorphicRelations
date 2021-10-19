@@ -4,7 +4,6 @@ public class shell_sort {
     public static Integer[] shell_sort_m(Integer[] a) {
         int j;
         int i;
-        int k;
         int m;
         int mid;
         for (m = a.length / 2; m > 0; m /= 2) {
