@@ -80,4 +80,7 @@ If the list of MRs contains less number of methods than the features file (check
 	NodePath_Features\NF-PF_DS-JK.csv
 	Labelled-Dataset\NF-PF_DS_JK-labelled.csv
 	
+	RWK_Features\RWK_DS-JK.csv
+	Labelled-Dataset\RWK_DS_JK-labelled.csv
+	
 	
