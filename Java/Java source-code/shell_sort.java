@@ -1,5 +1,3 @@
-
-
 public class shell_sort {
     public static Integer[] shell_sort_m(Integer[] a) {
         int j;
