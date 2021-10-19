@@ -35,6 +35,21 @@ The csv file will looks like:
 
 ![image](https://user-images.githubusercontent.com/42596938/137895252-1a87eeac-555e-4180-8a8a-7ee749e36626.png)
 
+
+The script  _**featureExtractor-RWK.py**_, extracts feature related to CFGs based on similarity measurements. Specifically, it calculates the random walk kernel between all the graphs. The values of the similarity measure are in the range [0-1], 0 means that two graphs have no similarity, 1 means that the two graphs are the same. Therefore, it is expected to have a matrix with a diagonal with ones. This script will create the _ ** RWK_Features ** _ directory (if not already created), and will save a CSV file with the extracted features.
+
+To executed _**featureExtractor-RWK.py**_ open Anaconda Prompt and follow the command line:
+
+	Python featureExtractor-RWK.py -i "Path to the dot files" -o "Name of the csv file"
+
+Example:
+
+	(base) C:\RENE-PredictingMetamorphicRelations\Phase_II-DataPreparation>python featureExtractor-RWK.py -i "C:\RENE-PredictingMetamorphicRelations\Java\Java dot files - from Kanewala\*" -o RWK_DS-JK 
+
+If everything goes well, the directory _**NodePath_Features**_ will be created and the "Namde of the csv file" file will be there. Also, in the terminal will appear the following message
+
+ 	 DONE! File saved in: C:\RENE-PredictingMetamorphicRelations\Phase_II-DataPreparation\RWK_Features\RWK_DS-JK.csv  
+
 The _ ** MR_labeller.py ** _ script labels the methods with a set of MR. Its inputs are the characteristics file and the MR list with its values.
 The MR list must be a CSV file, specifying the name of the methods and each MR must have the prefix "MR_"
 
