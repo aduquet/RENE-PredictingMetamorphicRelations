@@ -28,4 +28,10 @@ subprocess.run('pip install networkx')
 # nx_pydot
 subprocess.run('pip install nx_pydot')
 
+# scipy lib
+subprocess.run('pip install scipy')
+
+# pydot lib
+subprocess.run('pip install pydot')
+
 
