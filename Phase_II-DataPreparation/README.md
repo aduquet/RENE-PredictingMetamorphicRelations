@@ -50,7 +50,7 @@ If everything goes well, the directory _**NodePath_Features**_ will be created a
 
  	 DONE! File saved in: C:\RENE-PredictingMetamorphicRelations\Phase_II-DataPreparation\RWK_Features\RWK_DS-JK.csv  
 
-The _ ** MR_labeller.py ** _ script labels the methods with a set of MR. Its inputs are the characteristics file and the MR list with its values.
+The _**MR_labeller.py**_ script labels the methods with a set of MR. Its inputs are the characteristics file and the MR list with its values.
 The MR list must be a CSV file, specifying the name of the methods and each MR must have the prefix "MR_"
 
 Example:
