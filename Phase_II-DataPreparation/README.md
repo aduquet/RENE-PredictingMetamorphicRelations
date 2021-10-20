@@ -57,7 +57,7 @@ Example:
 
 ![image](https://user-images.githubusercontent.com/42596938/137913149-5775901c-0184-496e-857d-51e0b8c3bec4.png)
 
-To executed _ ** MR_labeller.py ** _ open Anaconda Prompt and  follow the command line:
+To executed _**MR_labeller.py**_ open Anaconda Prompt and  follow the command line:
 
 	python MR_labeller.py -i "path to the features.csv file" -mr "path to the list of MRs csv file" -o " Name of the new csv file"
 	
