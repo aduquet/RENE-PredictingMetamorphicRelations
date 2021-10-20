@@ -50,14 +50,14 @@ If everything goes well, the directory _**NodePath_Features**_ will be created a
 
  	 DONE! File saved in: C:\RENE-PredictingMetamorphicRelations\Phase_II-DataPreparation\RWK_Features\RWK_DS-JK.csv  
 
-The _ ** MR_labeller.py ** _ script labels the methods with a set of MR. Its inputs are the characteristics file and the MR list with its values.
+The _**MR_labeller.py**_ script labels the methods with a set of MR. Its inputs are the characteristics file and the MR list with its values.
 The MR list must be a CSV file, specifying the name of the methods and each MR must have the prefix "MR_"
 
 Example:
 
 ![image](https://user-images.githubusercontent.com/42596938/137913149-5775901c-0184-496e-857d-51e0b8c3bec4.png)
 
-To executed _ ** MR_labeller.py ** _ open Anaconda Prompt and  follow the command line:
+To executed _**MR_labeller.py**_ open Anaconda Prompt and  follow the command line:
 
 	python MR_labeller.py -i "path to the features.csv file" -mr "path to the list of MRs csv file" -o " Name of the new csv file"
 	
@@ -79,5 +79,8 @@ If the list of MRs contains less number of methods than the features file (check
  	
 	NodePath_Features\NF-PF_DS-JK.csv
 	Labelled-Dataset\NF-PF_DS_JK-labelled.csv
+	
+	RWK_Features\RWK_DS-JK.csv
+	Labelled-Dataset\RWK_DS_JK-labelled.csv
 	
 	
