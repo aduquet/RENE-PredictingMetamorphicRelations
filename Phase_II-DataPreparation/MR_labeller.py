@@ -23,7 +23,7 @@ def labeller(df_f, df_mr):
     df_mr = checkUnnameColumn(df_mr)
 
     if len(df_mr) != len(df_f):
-        print('\n *** WARNING: The number of rows is not the same. \n If there are empty spaces, they will be filled with NaN *** \n')
+        print('\n ** WARNING: The number of rows is not the same. \n If there are empty spaces, they will be filled with NaN ** \n')
 
     columNameMR = list(df_mr.columns.values)
     for i in columNameMR:
