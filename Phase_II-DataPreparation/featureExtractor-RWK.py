@@ -33,7 +33,7 @@ def read_dot(names_paths_df):
     # print(len(cfg_final))
     return cfg_final
 
-def create_df(matrixK, dot_names, matrixk):
+def create_df(matrixK, dot_names):
 
     columnsName = []
 
@@ -86,7 +86,7 @@ if __name__ == '__main__':
             for j in range(0, np.shape(matrixK)[1]):        
                 matrixK[i, j] = RWK(cfg_main[i], cfg_main[j])
 
-        df_rwk = create_df(matrixK, df_main, matrixK)
+        df_rwk = create_df(matrixK, df_main)
 
         saveFile(df_rwk, resultsPath, output)
 
