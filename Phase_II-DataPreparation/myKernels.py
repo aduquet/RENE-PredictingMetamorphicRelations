@@ -81,22 +81,36 @@ def calcGraphletKernelVal(g1Graphlets,g1NodeLabels,g2Graphlets,g2NodeLabels):
 	return k_graph			 
 
 def getNodeKernelValExactEqual(l1,l2):
-
-	if(l1 == l2): 
-		return 1
-	else:
-		return 0
+    if(l1 == l2): 
+        return 1
+    else:
+        return 0
 
 #calculate the kernel value k_subgraph(subg1,subg2) for two subgraphs 
 def calcSubgraphKernelVal(subg1,subg1NodeLabels,subg2,subg2NodeLabels):
+    
+    DiGM = nx.isomorphism.DiGraphMatcher(subg1,subg2)
 
-	DiGM = nx.isomorphism.DiGraphMatcher(subg1,subg2)
-	if DiGM.is_isomorphic():
-		nodeMap=DiGM.mapping
-		k_subgraph=1
-		for n in nodeMap:
-			k_subgraph=k_subgraph*getNodeKernelValExactEqual(subg1NodeLabels[n],subg2NodeLabels[n])
-	else:
-		k_subgraph=0
-	return k_subgraph
+    if DiGM.is_isomorphic():
+        nodeMap=DiGM.mapping
+        print(nodeMap)
+        k_subgraph=1
+        for n in nodeMap:
+            k_subgraph=k_subgraph*getNodeKernelValExactEqual(subg1NodeLabels[n],subg2NodeLabels[n])
+    else:
+        k_subgraph = 0
+	
+    return k_subgraph
 
+def GK(g1,g2):
+    g1=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/add_values.dot')
+    g2=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/array_calc.dot')
+    g1NodeLabels=nx.nodes(g1)
+    g1Graphlets = getSubgraphs(g1, 1)
+    g2NodeLabels = nx.nodes(g2)
+    g2Graphlets = getSubgraphs(g2, 1)
+    print(len(g1NodeLabels), len(g2NodeLabels))
+    val=calcGraphletKernelVal(g1Graphlets,g1NodeLabels,g2Graphlets,g2NodeLabels)
+    print(val) 
+    return val
+    # create_graphlet_kernel_matrix(sys.argv[1],sys.argv[2],int(sys.argv[3]))
