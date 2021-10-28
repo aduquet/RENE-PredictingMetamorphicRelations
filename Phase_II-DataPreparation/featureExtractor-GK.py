@@ -2,7 +2,6 @@ import os
 import pathlib
 import glob as gl
 import numpy as np
-from numpy.testing._private.utils import print_assert_equal
 import pandas as pd
 import networkx as nx
 
@@ -62,9 +61,10 @@ if __name__ == '__main__':
 
     @click.command()
     @click.option('-i', '--csv input file', 'dot_input', help= 'Path to the dot files')
+    @click.option('-s', '--s', 'size', help= 'Size')
     @click.option('-o', '--csv output file', 'output_file', help= 'Name of the csv output file')
 
-    def main(dot_input, output_file):
+    def main(dot_input, output_file, size):
 
         here_iam = str(pathlib.Path().absolute())
         resultsPath = here_iam + '\\GK_Features'
@@ -80,11 +80,12 @@ if __name__ == '__main__':
 
         for i in range(0, np.shape(matrixK)[0]):
             for j in range(0, np.shape(matrixK)[1]):
-                matrixK[i, j] = GK(cfg_main[i], cfg_main[j])
-            print(matrixK)
-            df_rwk = create_df(matrixK, df_main)
-            saveFile(df_rwk, resultsPath, output_file)
+                matrixK[i, j] = GK(cfg_main[i], cfg_main[j], int(size))
+            # print(matrixK)
         
-        print(output_file)
+        df_rwk = create_df(matrixK, df_main)
+        saveFile(df_rwk, resultsPath, output_file)
+        
+        # print(output_file)
     
 main()
