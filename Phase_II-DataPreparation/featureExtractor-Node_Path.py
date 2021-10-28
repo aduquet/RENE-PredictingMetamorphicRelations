@@ -285,9 +285,7 @@ def update_df_main(ind, node_data, ft):
     for index, row in df_main.iterrows():
         a = row.at['dot_name']
         if a == ind:
-            # print(a)
             for j in node_data:
-                # print(node_data[j])
                 new_colum = ft + j
                 df_main.at[index, new_colum] = node_data[j]
 
@@ -330,16 +328,13 @@ if __name__ == '__main__':
             dot_path_aux.append(dot)
         df_main['dot_name'] = dot_name
         df_main['dot_path'] = dot_path_aux
-        #print(df_main)
+
         node_data = get_node_counts(dot_path)
-        # print(node_data)
 
         '''Path feature'''
         start_path_name_data = get_start_to_node_path_data(dot_path)
-        # print(start_path_name_data)
 
         end_path_name_data = get_node_to_end_path_data(dot_path)
-        # print(end_path_name_data)
 
         for i in node_data:
             update_df_main(i, node_data[i], 'NF_')
