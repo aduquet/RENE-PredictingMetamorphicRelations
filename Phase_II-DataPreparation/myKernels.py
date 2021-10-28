@@ -44,7 +44,7 @@ def nodeLabelExactMatch(nodeMap,labels):
 def getSubgraphs(graph,size):
 
 	nodes = graph.nodes()
-	labels = nx.nodes(graph) 
+	labels = nx.get_node_attributes(graph, 'label') 
 	combs = itertools.combinations(nodes,size)
 	connectedSubgs = []
 	subgs = {}
@@ -93,7 +93,6 @@ def calcSubgraphKernelVal(subg1,subg1NodeLabels,subg2,subg2NodeLabels):
 
     if DiGM.is_isomorphic():
         nodeMap=DiGM.mapping
-        print(nodeMap)
         k_subgraph=1
         for n in nodeMap:
             k_subgraph=k_subgraph*getNodeKernelValExactEqual(subg1NodeLabels[n],subg2NodeLabels[n])
@@ -102,15 +101,24 @@ def calcSubgraphKernelVal(subg1,subg1NodeLabels,subg2,subg2NodeLabels):
 	
     return k_subgraph
 
-def GK(g1,g2):
-    g1=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/add_values.dot')
-    g2=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/array_calc.dot')
-    g1NodeLabels=nx.nodes(g1)
-    g1Graphlets = getSubgraphs(g1, 1)
-    g2NodeLabels = nx.nodes(g2)
-    g2Graphlets = getSubgraphs(g2, 1)
-    print(len(g1NodeLabels), len(g2NodeLabels))
+def GK(g1, g2, s):
+    # g1=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/pooledVariance.dot')
+    # g2=nx.drawing.nx_pydot.read_dot('C:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations/Java/Java dot files - from Kanewala/add_values.dot')
+    
+    if len(nx.get_node_attributes(g1, 'label')) < len(nx.get_node_attributes(g2, 'label')):
+        # print('****')
+        g1Graphlets = getSubgraphs(g1, s)
+        g2Graphlets = getSubgraphs(g2, s)
+        g1NodeLabels = nx.get_node_attributes(g1, 'label')
+        g2NodeLabels = nx.get_node_attributes(g2, 'label')
+    else:
+        g1Graphlets = getSubgraphs(g2, s)
+        g2Graphlets = getSubgraphs(g1, s)
+        g1NodeLabels = nx.get_node_attributes(g2, 'label')
+        g2NodeLabels = nx.get_node_attributes(g1, 'label')
+
+    
     val=calcGraphletKernelVal(g1Graphlets,g1NodeLabels,g2Graphlets,g2NodeLabels)
-    print(val) 
+    # print(val) 
     return val
     # create_graphlet_kernel_matrix(sys.argv[1],sys.argv[2],int(sys.argv[3]))
