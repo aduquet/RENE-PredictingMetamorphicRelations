@@ -1,0 +1,11 @@
+make: Entering directory 'c:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations'
+ 
+make: C:/Users/duquet/Documents/GitHub/Pred_MR-Extention/C++_CFG/makefile: No such file or directory
+ 
+make: *** No rule to make target 'C:/Users/duquet/Documents/GitHub/Pred_MR-Extention/C++_CFG/makefile'.
+make: Failed to remake makefile 'C:/Users/duquet/Documents/GitHub/Pred_MR-Extention/C++_CFG/makefile'.
+ 
+make: Leaving directory 'c:/Users/duquet/Documents/GitHub/RENE-PredictingMetamorphicRelations'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
