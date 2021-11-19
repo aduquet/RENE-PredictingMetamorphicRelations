@@ -1,0 +1,19 @@
+digraph "CFG for '_Z8find_maxPii' function" {
+	label="CFG for '_Z8find_maxPii' function";
+
+	Node0x1bc29d92510 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32 %1, i32* %4, align 4\l  %7 = load i32*, i32** %3, align 8\l  %8 = getelementptr inbounds i32, i32* %7, i64 0\l  %9 = load i32, i32* %8, align 4\l  store i32 %9, i32* %5, align 4\l  store i32 0, i32* %6, align 4\l  br label %10\l}"];
+	Node0x1bc29d92510 -> Node0x1bc29d92650;
+	Node0x1bc29d92650 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%10:\l10:                                               \l  %11 = load i32, i32* %6, align 4\l  %12 = load i32, i32* %4, align 4\l  %13 = icmp slt i32 %11, %12\l  br i1 %13, label %14, label %32\l|{<s0>T|<s1>F}}"];
+	Node0x1bc29d92650:s0 -> Node0x1bc29d91070;
+	Node0x1bc29d92650:s1 -> Node0x1bc29d90f80;
+	Node0x1bc29d91070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%14:\l14:                                               \l  %15 = load i32*, i32** %3, align 8\l  %16 = load i32, i32* %6, align 4\l  %17 = sext i32 %16 to i64\l  %18 = getelementptr inbounds i32, i32* %15, i64 %17\l  %19 = load i32, i32* %18, align 4\l  %20 = load i32, i32* %5, align 4\l  %21 = icmp sgt i32 %19, %20\l  br i1 %21, label %22, label %28\l|{<s0>T|<s1>F}}"];
+	Node0x1bc29d91070:s0 -> Node0x1bc29d90bc0;
+	Node0x1bc29d91070:s1 -> Node0x1bc29d912a0;
+	Node0x1bc29d90bc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%22:\l22:                                               \l  %23 = load i32*, i32** %3, align 8\l  %24 = load i32, i32* %6, align 4\l  %25 = sext i32 %24 to i64\l  %26 = getelementptr inbounds i32, i32* %23, i64 %25\l  %27 = load i32, i32* %26, align 4\l  store i32 %27, i32* %5, align 4\l  br label %28\l}"];
+	Node0x1bc29d90bc0 -> Node0x1bc29d912a0;
+	Node0x1bc29d912a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%28:\l28:                                               \l  br label %29\l}"];
+	Node0x1bc29d912a0 -> Node0x1bc29d91c50;
+	Node0x1bc29d91c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%29:\l29:                                               \l  %30 = load i32, i32* %6, align 4\l  %31 = add nsw i32 %30, 1\l  store i32 %31, i32* %6, align 4\l  br label %10, !llvm.loop !3\l}"];
+	Node0x1bc29d91c50 -> Node0x1bc29d92650;
+	Node0x1bc29d90f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%32:\l32:                                               \l  %33 = load i32, i32* %5, align 4\l  ret i32 %33\l}"];
+}

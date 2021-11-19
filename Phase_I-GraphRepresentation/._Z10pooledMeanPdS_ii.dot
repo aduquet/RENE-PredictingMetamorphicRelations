@@ -1,0 +1,23 @@
+digraph "CFG for '_Z10pooledMeanPdS_ii' function" {
+	label="CFG for '_Z10pooledMeanPdS_ii' function";
+
+	Node0x19c5e8c22e0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%4:\l  %5 = alloca double*, align 8\l  %6 = alloca double*, align 8\l  %7 = alloca i32, align 4\l  %8 = alloca i32, align 4\l  %9 = alloca double, align 8\l  %10 = alloca i32, align 4\l  %11 = alloca double, align 8\l  %12 = alloca double, align 8\l  %13 = alloca i32, align 4\l  %14 = alloca double, align 8\l  store double* %0, double** %5, align 8\l  store double* %1, double** %6, align 8\l  store i32 %2, i32* %7, align 4\l  store i32 %3, i32* %8, align 4\l  store double 0.000000e+00, double* %9, align 8\l  store i32 0, i32* %10, align 4\l  br label %15\l}"];
+	Node0x19c5e8c22e0 -> Node0x19c5e8c2330;
+	Node0x19c5e8c2330 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%15:\l15:                                               \l  %16 = load i32, i32* %10, align 4\l  %17 = load i32, i32* %7, align 4\l  %18 = icmp slt i32 %16, %17\l  br i1 %18, label %19, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x19c5e8c2330:s0 -> Node0x19c5e8c1700;
+	Node0x19c5e8c2330:s1 -> Node0x19c5e8c0a80;
+	Node0x19c5e8c1700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%19:\l19:                                               \l  %20 = load double*, double** %5, align 8\l  %21 = load i32, i32* %10, align 4\l  %22 = sext i32 %21 to i64\l  %23 = getelementptr inbounds double, double* %20, i64 %22\l  %24 = load double, double* %23, align 8\l  %25 = load double, double* %9, align 8\l  %26 = fadd double %25, %24\l  store double %26, double* %9, align 8\l  br label %27\l}"];
+	Node0x19c5e8c1700 -> Node0x19c5e8c10c0;
+	Node0x19c5e8c10c0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%27:\l27:                                               \l  %28 = load i32, i32* %10, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, i32* %10, align 4\l  br label %15, !llvm.loop !3\l}"];
+	Node0x19c5e8c10c0 -> Node0x19c5e8c2330;
+	Node0x19c5e8c0a80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%30:\l30:                                               \l  %31 = load double, double* %9, align 8\l  %32 = load i32, i32* %7, align 4\l  %33 = sitofp i32 %32 to double\l  %34 = fdiv double %31, %33\l  store double %34, double* %11, align 8\l  store double 0.000000e+00, double* %12, align 8\l  store i32 0, i32* %13, align 4\l  br label %35\l}"];
+	Node0x19c5e8c0a80 -> Node0x19c5e8c0c10;
+	Node0x19c5e8c0c10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%35:\l35:                                               \l  %36 = load i32, i32* %13, align 4\l  %37 = load i32, i32* %8, align 4\l  %38 = icmp slt i32 %36, %37\l  br i1 %38, label %39, label %50\l|{<s0>T|<s1>F}}"];
+	Node0x19c5e8c0c10:s0 -> Node0x19c5e8c1b10;
+	Node0x19c5e8c0c10:s1 -> Node0x19c5e8c0cb0;
+	Node0x19c5e8c1b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%39:\l39:                                               \l  %40 = load double*, double** %6, align 8\l  %41 = load i32, i32* %13, align 4\l  %42 = sext i32 %41 to i64\l  %43 = getelementptr inbounds double, double* %40, i64 %42\l  %44 = load double, double* %43, align 8\l  %45 = load double, double* %12, align 8\l  %46 = fadd double %45, %44\l  store double %46, double* %12, align 8\l  br label %47\l}"];
+	Node0x19c5e8c1b10 -> Node0x19c5e8c0fd0;
+	Node0x19c5e8c0fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%47:\l47:                                               \l  %48 = load i32, i32* %13, align 4\l  %49 = add nsw i32 %48, 1\l  store i32 %49, i32* %13, align 4\l  br label %35, !llvm.loop !5\l}"];
+	Node0x19c5e8c0fd0 -> Node0x19c5e8c0c10;
+	Node0x19c5e8c0cb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%50:\l50:                                               \l  %51 = load double, double* %12, align 8\l  %52 = load i32, i32* %8, align 4\l  %53 = sitofp i32 %52 to double\l  %54 = fdiv double %51, %53\l  store double %54, double* %14, align 8\l  %55 = load i32, i32* %7, align 4\l  %56 = sitofp i32 %55 to double\l  %57 = load double, double* %11, align 8\l  %58 = fmul double %56, %57\l  %59 = load i32, i32* %8, align 4\l  %60 = sitofp i32 %59 to double\l  %61 = load double, double* %14, align 8\l  %62 = fmul double %60, %61\l  %63 = fadd double %58, %62\l  %64 = load i32, i32* %7, align 4\l  %65 = load i32, i32* %8, align 4\l  %66 = add nsw i32 %64, %65\l  %67 = sitofp i32 %66 to double\l  %68 = fdiv double %63, %67\l  ret double %68\l}"];
+}

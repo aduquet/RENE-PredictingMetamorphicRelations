@@ -1,0 +1,20 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	8	[label="0: stop"];
+	0 -> 8;
+	1	[label="1: enter: autoCorrelation(data, lag, mean, variance)"];
+	3	[label="2: N = len(data)"];
+	1 -> 3;
+	4	[label="3: run = 0"];
+	3 -> 4;
+	2	[label="1: exit: autoCorrelation(data, lag, mean, variance)"];
+	7	[label="6: return ((run / (N - lag)) / variance)"];
+	7 -> 2;
+	5	[label="4: for: (True if range(lag, N) else False)"];
+	4 -> 5;
+	5 -> 7;
+	6	[label="4: i = range(lag, N).shift()"];
+	5 -> 6;
+	6 -> 5;
+}

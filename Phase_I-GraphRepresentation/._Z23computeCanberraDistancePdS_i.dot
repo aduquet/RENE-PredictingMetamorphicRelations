@@ -1,0 +1,24 @@
+digraph "CFG for '_Z23computeCanberraDistancePdS_i' function" {
+	label="CFG for '_Z23computeCanberraDistancePdS_i' function";
+
+	Node0x20704451bb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%3:\l  %4 = alloca double*, align 8\l  %5 = alloca double*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca double, align 8\l  %8 = alloca i32, align 4\l  %9 = alloca double, align 8\l  %10 = alloca double, align 8\l  store double* %0, double** %4, align 8\l  store double* %1, double** %5, align 8\l  store i32 %2, i32* %6, align 4\l  store double 0.000000e+00, double* %7, align 8\l  store i32 0, i32* %8, align 4\l  br label %11\l}"];
+	Node0x20704451bb0 -> Node0x20704451c00;
+	Node0x20704451c00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%11:\l11:                                               \l  %12 = load i32, i32* %8, align 4\l  %13 = load i32, i32* %6, align 4\l  %14 = icmp slt i32 %12, %13\l  br i1 %14, label %15, label %63\l|{<s0>T|<s1>F}}"];
+	Node0x20704451c00:s0 -> Node0x20704450fd0;
+	Node0x20704451c00:s1 -> Node0x20704450b70;
+	Node0x20704450fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%15:\l15:                                               \l  %16 = load double*, double** %4, align 8\l  %17 = load i32, i32* %8, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr inbounds double, double* %16, i64 %18\l  %20 = load double, double* %19, align 8\l  %21 = load double*, double** %5, align 8\l  %22 = load i32, i32* %8, align 4\l  %23 = sext i32 %22 to i64\l  %24 = getelementptr inbounds double, double* %21, i64 %23\l  %25 = load double, double* %24, align 8\l  %26 = fsub double %20, %25\l  %27 = fptosi double %26 to i32\l  %28 = call i32 @abs(i32 %27) #6\l  %29 = sitofp i32 %28 to double\l  store double %29, double* %9, align 8\l  %30 = load double*, double** %4, align 8\l  %31 = load i32, i32* %8, align 4\l  %32 = sext i32 %31 to i64\l  %33 = getelementptr inbounds double, double* %30, i64 %32\l  %34 = load double, double* %33, align 8\l  %35 = fptosi double %34 to i32\l  %36 = call i32 @abs(i32 %35) #6\l  %37 = load double*, double** %5, align 8\l  %38 = load i32, i32* %8, align 4\l  %39 = sext i32 %38 to i64\l  %40 = getelementptr inbounds double, double* %37, i64 %39\l  %41 = load double, double* %40, align 8\l  %42 = fptosi double %41 to i32\l  %43 = call i32 @abs(i32 %42) #6\l  %44 = add nsw i32 %36, %43\l  %45 = sitofp i32 %44 to double\l  store double %45, double* %10, align 8\l  %46 = load double, double* %9, align 8\l  %47 = fcmp oeq double %46, 0.000000e+00\l  br i1 %47, label %48, label %52\l|{<s0>T|<s1>F}}"];
+	Node0x20704450fd0:s0 -> Node0x20704450d50;
+	Node0x20704450fd0:s1 -> Node0x20704451c50;
+	Node0x20704450d50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#d6524470",label="{%48:\l48:                                               \l  %49 = load double, double* %10, align 8\l  %50 = fcmp oeq double %49, 0.000000e+00\l  br i1 %50, label %51, label %52\l|{<s0>T|<s1>F}}"];
+	Node0x20704450d50:s0 -> Node0x20704451ca0;
+	Node0x20704450d50:s1 -> Node0x20704451c50;
+	Node0x20704451ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#ec7f6370",label="{%51:\l51:                                               \l  br label %56\l}"];
+	Node0x20704451ca0 -> Node0x20704450da0;
+	Node0x20704451c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#d6524470",label="{%52:\l52:                                               \l  %53 = load double, double* %9, align 8\l  %54 = load double, double* %10, align 8\l  %55 = fdiv double %53, %54\l  br label %56\l}"];
+	Node0x20704451c50 -> Node0x20704450da0;
+	Node0x20704450da0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%56:\l56:                                               \l  %57 = phi double [ 0.000000e+00, %51 ], [ %55, %52 ]\l  %58 = load double, double* %7, align 8\l  %59 = fadd double %58, %57\l  store double %59, double* %7, align 8\l  br label %60\l}"];
+	Node0x20704450da0 -> Node0x207044512a0;
+	Node0x207044512a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%60:\l60:                                               \l  %61 = load i32, i32* %8, align 4\l  %62 = add nsw i32 %61, 1\l  store i32 %62, i32* %8, align 4\l  br label %11, !llvm.loop !3\l}"];
+	Node0x207044512a0 -> Node0x20704451c00;
+	Node0x20704450b70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%63:\l63:                                               \l  %64 = load double, double* %7, align 8\l  ret double %64\l}"];
+}

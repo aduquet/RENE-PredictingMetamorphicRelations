@@ -1,0 +1,20 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	8	[label="0: stop"];
+	0 -> 8;
+	1	[label="4: enter: find_magnitude(a)"];
+	3	[label="5: sum = 0"];
+	1 -> 3;
+	4	[label="6: for: (True if range(0, len(a)) else False)"];
+	3 -> 4;
+	2	[label="4: exit: find_magnitude(a)"];
+	7	[label="9: return result"];
+	7 -> 2;
+	5	[label="6: i = range(0, len(a)).shift()"];
+	4 -> 5;
+	6	[label="8: result = math.sqrt(sum)"];
+	4 -> 6;
+	5 -> 4;
+	6 -> 7;
+}

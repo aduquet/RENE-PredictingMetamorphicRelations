@@ -1,0 +1,14 @@
+digraph "CFG for '_Z14meanDifferencePdS_i' function" {
+	label="CFG for '_Z14meanDifferencePdS_i' function";
+
+	Node0x1c712900f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%3:\l  %4 = alloca double*, align 8\l  %5 = alloca double*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca double, align 8\l  %8 = alloca i32, align 4\l  store double* %0, double** %4, align 8\l  store double* %1, double** %5, align 8\l  store i32 %2, i32* %6, align 4\l  store double 0.000000e+00, double* %7, align 8\l  store i32 0, i32* %8, align 4\l  br label %9\l}"];
+	Node0x1c712900f80 -> Node0x1c712900bc0;
+	Node0x1c712900bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%9:\l9:                                                \l  %10 = load i32, i32* %8, align 4\l  %11 = load i32, i32* %6, align 4\l  %12 = icmp slt i32 %10, %11\l  br i1 %12, label %13, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x1c712900bc0:s0 -> Node0x1c7129011b0;
+	Node0x1c712900bc0:s1 -> Node0x1c7129012a0;
+	Node0x1c7129011b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%13:\l13:                                               \l  %14 = load double*, double** %4, align 8\l  %15 = load i32, i32* %8, align 4\l  %16 = sext i32 %15 to i64\l  %17 = getelementptr inbounds double, double* %14, i64 %16\l  %18 = load double, double* %17, align 8\l  %19 = load double*, double** %5, align 8\l  %20 = load i32, i32* %8, align 4\l  %21 = sext i32 %20 to i64\l  %22 = getelementptr inbounds double, double* %19, i64 %21\l  %23 = load double, double* %22, align 8\l  %24 = fsub double %18, %23\l  %25 = load double, double* %7, align 8\l  %26 = fadd double %25, %24\l  store double %26, double* %7, align 8\l  br label %27\l}"];
+	Node0x1c7129011b0 -> Node0x1c712901520;
+	Node0x1c712901520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%27:\l27:                                               \l  %28 = load i32, i32* %8, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, i32* %8, align 4\l  br label %9, !llvm.loop !3\l}"];
+	Node0x1c712901520 -> Node0x1c712900bc0;
+	Node0x1c7129012a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%30:\l30:                                               \l  %31 = load double, double* %7, align 8\l  %32 = load i32, i32* %6, align 4\l  %33 = sitofp i32 %32 to double\l  %34 = fdiv double %31, %33\l  ret double %34\l}"];
+}

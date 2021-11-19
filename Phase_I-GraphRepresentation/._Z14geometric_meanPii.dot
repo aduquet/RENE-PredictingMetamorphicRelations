@@ -1,0 +1,14 @@
+digraph "CFG for '_Z14geometric_meanPii' function" {
+	label="CFG for '_Z14geometric_meanPii' function";
+
+	Node0x17728b60f80 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store i32 1, i32* %5, align 4\l  store i32 0, i32* %6, align 4\l  br label %7\l}"];
+	Node0x17728b60f80 -> Node0x17728b61520;
+	Node0x17728b61520 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%7:\l7:                                                \l  %8 = load i32, i32* %6, align 4\l  %9 = load i32, i32* %4, align 4\l  %10 = icmp slt i32 %8, %9\l  br i1 %10, label %11, label %22\l|{<s0>T|<s1>F}}"];
+	Node0x17728b61520:s0 -> Node0x17728b61b10;
+	Node0x17728b61520:s1 -> Node0x17728b61b60;
+	Node0x17728b61b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%11:\l11:                                               \l  %12 = load i32*, i32** %3, align 8\l  %13 = load i32, i32* %6, align 4\l  %14 = sext i32 %13 to i64\l  %15 = getelementptr inbounds i32, i32* %12, i64 %14\l  %16 = load i32, i32* %15, align 4\l  %17 = load i32, i32* %5, align 4\l  %18 = mul nsw i32 %17, %16\l  store i32 %18, i32* %5, align 4\l  br label %19\l}"];
+	Node0x17728b61b10 -> Node0x17728b612a0;
+	Node0x17728b612a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%19:\l19:                                               \l  %20 = load i32, i32* %6, align 4\l  %21 = add nsw i32 %20, 1\l  store i32 %21, i32* %6, align 4\l  br label %7, !llvm.loop !3\l}"];
+	Node0x17728b612a0 -> Node0x17728b61520;
+	Node0x17728b61b60 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%22:\l22:                                               \l  %23 = load i32, i32* %5, align 4\l  %24 = load i32, i32* %4, align 4\l  %25 = sitofp i32 %24 to double\l  %26 = fdiv double 1.000000e+00, %25\l  %27 = call double\l... @_ZSt3powIldEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_Xsr3std12__is_int\l...egerIS2_EE7__valueEE6__typeENS4_IS3_Xsr3std12__is_integerIS3_EE7__valueEE6__typ\l...eEE6__typeES2_S3_(i32 %23, double %26)\l  ret double %27\l}"];
+}

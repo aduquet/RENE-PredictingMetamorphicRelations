@@ -1,0 +1,19 @@
+digraph "CFG for '_Z16count_non_zeroesPii' function" {
+	label="CFG for '_Z16count_non_zeroesPii' function";
+
+	Node0x15792bc0cb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store i32 0, i32* %5, align 4\l  store i32 0, i32* %6, align 4\l  br label %7\l}"];
+	Node0x15792bc0cb0 -> Node0x15792bc1660;
+	Node0x15792bc1660 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%7:\l7:                                                \l  %8 = load i32, i32* %6, align 4\l  %9 = load i32, i32* %4, align 4\l  %10 = icmp slt i32 %8, %9\l  br i1 %10, label %11, label %25\l|{<s0>T|<s1>F}}"];
+	Node0x15792bc1660:s0 -> Node0x15792bc09e0;
+	Node0x15792bc1660:s1 -> Node0x15792bc1200;
+	Node0x15792bc09e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%11:\l11:                                               \l  %12 = load i32*, i32** %3, align 8\l  %13 = load i32, i32* %6, align 4\l  %14 = sext i32 %13 to i64\l  %15 = getelementptr inbounds i32, i32* %12, i64 %14\l  %16 = load i32, i32* %15, align 4\l  %17 = icmp ne i32 %16, 0\l  br i1 %17, label %18, label %21\l|{<s0>T|<s1>F}}"];
+	Node0x15792bc09e0:s0 -> Node0x15792bc0d00;
+	Node0x15792bc09e0:s1 -> Node0x15792bc11b0;
+	Node0x15792bc0d00 [shape=record,color="#b70d28ff", style=filled, fillcolor="#d6524470",label="{%18:\l18:                                               \l  %19 = load i32, i32* %5, align 4\l  %20 = add nsw i32 %19, 1\l  store i32 %20, i32* %5, align 4\l  br label %21\l}"];
+	Node0x15792bc0d00 -> Node0x15792bc11b0;
+	Node0x15792bc11b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%21:\l21:                                               \l  br label %22\l}"];
+	Node0x15792bc11b0 -> Node0x15792bc1700;
+	Node0x15792bc1700 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%22:\l22:                                               \l  %23 = load i32, i32* %6, align 4\l  %24 = add nsw i32 %23, 1\l  store i32 %24, i32* %6, align 4\l  br label %7, !llvm.loop !3\l}"];
+	Node0x15792bc1700 -> Node0x15792bc1660;
+	Node0x15792bc1200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%25:\l25:                                               \l  %26 = load i32, i32* %5, align 4\l  ret i32 %26\l}"];
+}

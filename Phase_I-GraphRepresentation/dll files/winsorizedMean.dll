@@ -1,0 +1,189 @@
+; ModuleID = 'C:\Users\duquet\Documents\GitHub\RENE-PredictingMetamorphicRelations\Methods-C++\winsorizedMean.cpp'
+source_filename = "C:\\Users\\duquet\\Documents\\GitHub\\RENE-PredictingMetamorphicRelations\\Methods-C++\\winsorizedMean.cpp"
+target datalayout = "e-m:w-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-w64-windows-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_winsorizedMean.cpp, i8* null }]
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1) @_ZStL8__ioinit)
+  %1 = call i32 @atexit(void ()* @__dtor__ZStL8__ioinit) #3
+  ret void
+}
+
+declare dso_local void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1)) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare dso_local void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1)) unnamed_addr #2
+
+; Function Attrs: noinline uwtable
+define internal void @__dtor__ZStL8__ioinit() #0 {
+  call void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  ret void
+}
+
+; Function Attrs: nounwind
+declare dso_local i32 @atexit(void ()*) #3
+
+; Function Attrs: noinline nounwind optnone uwtable mustprogress
+define dso_local double @_Z14winsorizedMeanPdiii(double* %0, i32 %1, i32 %2, i32 %3) #4 {
+  %5 = alloca double*, align 8
+  %6 = alloca i32, align 4
+  %7 = alloca i32, align 4
+  %8 = alloca i32, align 4
+  %9 = alloca double, align 8
+  %10 = alloca i32, align 4
+  %11 = alloca double, align 8
+  %12 = alloca double, align 8
+  %13 = alloca i32, align 4
+  %14 = alloca double, align 8
+  %15 = alloca i32, align 4
+  store double* %0, double** %5, align 8
+  store i32 %1, i32* %6, align 4
+  store i32 %2, i32* %7, align 4
+  store i32 %3, i32* %8, align 4
+  store double 0.000000e+00, double* %9, align 8
+  store i32 0, i32* %10, align 4
+  br label %16
+
+16:                                               ; preds = %28, %4
+  %17 = load i32, i32* %10, align 4
+  %18 = load i32, i32* %8, align 4
+  %19 = icmp slt i32 %17, %18
+  br i1 %19, label %20, label %31
+
+20:                                               ; preds = %16
+  %21 = load double*, double** %5, align 8
+  %22 = load i32, i32* %10, align 4
+  %23 = sext i32 %22 to i64
+  %24 = getelementptr inbounds double, double* %21, i64 %23
+  %25 = load double, double* %24, align 8
+  %26 = load double, double* %9, align 8
+  %27 = fadd double %26, %25
+  store double %27, double* %9, align 8
+  br label %28
+
+28:                                               ; preds = %20
+  %29 = load i32, i32* %10, align 4
+  %30 = add nsw i32 %29, 1
+  store i32 %30, i32* %10, align 4
+  br label %16, !llvm.loop !3
+
+31:                                               ; preds = %16
+  %32 = load double, double* %9, align 8
+  %33 = load i32, i32* %8, align 4
+  %34 = sitofp i32 %33 to double
+  %35 = fdiv double %32, %34
+  store double %35, double* %11, align 8
+  %36 = load double*, double** %5, align 8
+  %37 = load i32, i32* %6, align 4
+  %38 = sext i32 %37 to i64
+  %39 = getelementptr inbounds double, double* %36, i64 %38
+  %40 = load double, double* %39, align 8
+  store double %40, double* %12, align 8
+  store i32 0, i32* %13, align 4
+  br label %41
+
+41:                                               ; preds = %58, %31
+  %42 = load i32, i32* %13, align 4
+  %43 = load i32, i32* %6, align 4
+  %44 = icmp slt i32 %42, %43
+  br i1 %44, label %45, label %61
+
+45:                                               ; preds = %41
+  %46 = load double, double* %12, align 8
+  %47 = load double*, double** %5, align 8
+  %48 = load i32, i32* %13, align 4
+  %49 = sext i32 %48 to i64
+  %50 = getelementptr inbounds double, double* %47, i64 %49
+  %51 = load double, double* %50, align 8
+  %52 = fsub double %46, %51
+  %53 = load i32, i32* %8, align 4
+  %54 = sitofp i32 %53 to double
+  %55 = fdiv double %52, %54
+  %56 = load double, double* %11, align 8
+  %57 = fadd double %56, %55
+  store double %57, double* %11, align 8
+  br label %58
+
+58:                                               ; preds = %45
+  %59 = load i32, i32* %13, align 4
+  %60 = add nsw i32 %59, 1
+  store i32 %60, i32* %13, align 4
+  br label %41, !llvm.loop !5
+
+61:                                               ; preds = %41
+  %62 = load double*, double** %5, align 8
+  %63 = load i32, i32* %8, align 4
+  %64 = sub nsw i32 %63, 1
+  %65 = load i32, i32* %7, align 4
+  %66 = sub nsw i32 %64, %65
+  %67 = sext i32 %66 to i64
+  %68 = getelementptr inbounds double, double* %62, i64 %67
+  %69 = load double, double* %68, align 8
+  store double %69, double* %14, align 8
+  store i32 0, i32* %15, align 4
+  br label %70
+
+70:                                               ; preds = %90, %61
+  %71 = load i32, i32* %15, align 4
+  %72 = load i32, i32* %7, align 4
+  %73 = icmp slt i32 %71, %72
+  br i1 %73, label %74, label %93
+
+74:                                               ; preds = %70
+  %75 = load double, double* %14, align 8
+  %76 = load double*, double** %5, align 8
+  %77 = load i32, i32* %8, align 4
+  %78 = sub nsw i32 %77, 1
+  %79 = load i32, i32* %15, align 4
+  %80 = sub nsw i32 %78, %79
+  %81 = sext i32 %80 to i64
+  %82 = getelementptr inbounds double, double* %76, i64 %81
+  %83 = load double, double* %82, align 8
+  %84 = fsub double %75, %83
+  %85 = load i32, i32* %8, align 4
+  %86 = sitofp i32 %85 to double
+  %87 = fdiv double %84, %86
+  %88 = load double, double* %11, align 8
+  %89 = fadd double %88, %87
+  store double %89, double* %11, align 8
+  br label %90
+
+90:                                               ; preds = %74
+  %91 = load i32, i32* %15, align 4
+  %92 = add nsw i32 %91, 1
+  store i32 %92, i32* %15, align 4
+  br label %70, !llvm.loop !6
+
+93:                                               ; preds = %70
+  %94 = load double, double* %11, align 8
+  ret double %94
+}
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_winsorizedMean.cpp() #0 {
+  call void @__cxx_global_var_init()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline nounwind optnone uwtable mustprogress "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.module.flags = !{!0, !1}
+!llvm.ident = !{!2}
+
+!0 = !{i32 1, !"wchar_size", i32 2}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{!"clang version 12.0.1"}
+!3 = distinct !{!3, !4}
+!4 = !{!"llvm.loop.mustprogress"}
+!5 = distinct !{!5, !4}
+!6 = distinct !{!6, !4}

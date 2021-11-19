@@ -1,0 +1,5 @@
+digraph "CFG for '_GLOBAL__sub_I_add_two_array_values.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_add_two_array_values.cpp' function";
+
+	Node0x1850a8c1bb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  call void @__cxx_global_var_init()\l  ret void\l}"];
+}

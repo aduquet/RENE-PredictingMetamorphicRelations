@@ -1,0 +1,26 @@
+digraph "CFG for '_Z14insertion_sortPii' function" {
+	label="CFG for '_Z14insertion_sortPii' function";
+
+	Node0x1910faa1c50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#88abfd70",label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store i32 1, i32* %5, align 4\l  br label %8\l}"];
+	Node0x1910faa1c50 -> Node0x1910faa1840;
+	Node0x1910faa1840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{%8:\l8:                                                \l  %9 = load i32, i32* %5, align 4\l  %10 = load i32, i32* %4, align 4\l  %11 = icmp slt i32 %9, %10\l  br i1 %11, label %12, label %55\l|{<s0>T|<s1>F}}"];
+	Node0x1910faa1840:s0 -> Node0x1910faa1a20;
+	Node0x1910faa1840:s1 -> Node0x1910faa10c0;
+	Node0x1910faa1a20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{%12:\l12:                                               \l  %13 = load i32, i32* %5, align 4\l  store i32 %13, i32* %6, align 4\l  %14 = load i32*, i32** %3, align 8\l  %15 = load i32, i32* %5, align 4\l  %16 = sext i32 %15 to i64\l  %17 = getelementptr inbounds i32, i32* %14, i64 %16\l  %18 = load i32, i32* %17, align 4\l  store i32 %18, i32* %7, align 4\l  br label %19\l}"];
+	Node0x1910faa1a20 -> Node0x1910faa1250;
+	Node0x1910faa1250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%19:\l19:                                               \l  %20 = load i32, i32* %6, align 4\l  %21 = icmp sgt i32 %20, 0\l  br i1 %21, label %22, label %31\l|{<s0>T|<s1>F}}"];
+	Node0x1910faa1250:s0 -> Node0x1910faa12a0;
+	Node0x1910faa1250:s1 -> Node0x1910faa1340;
+	Node0x1910faa12a0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#ca3b3770",label="{%22:\l22:                                               \l  %23 = load i32*, i32** %3, align 8\l  %24 = load i32, i32* %6, align 4\l  %25 = sub nsw i32 %24, 1\l  %26 = sext i32 %25 to i64\l  %27 = getelementptr inbounds i32, i32* %23, i64 %26\l  %28 = load i32, i32* %27, align 4\l  %29 = load i32, i32* %7, align 4\l  %30 = icmp sgt i32 %28, %29\l  br label %31\l}"];
+	Node0x1910faa12a0 -> Node0x1910faa1340;
+	Node0x1910faa1340 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%31:\l31:                                               \l  %32 = phi i1 [ false, %19 ], [ %30, %22 ]\l  br i1 %32, label %33, label %46\l|{<s0>T|<s1>F}}"];
+	Node0x1910faa1340:s0 -> Node0x1910faa1430;
+	Node0x1910faa1340:s1 -> Node0x1910faa1a70;
+	Node0x1910faa1430 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%33:\l33:                                               \l  %34 = load i32*, i32** %3, align 8\l  %35 = load i32, i32* %6, align 4\l  %36 = sub nsw i32 %35, 1\l  %37 = sext i32 %36 to i64\l  %38 = getelementptr inbounds i32, i32* %34, i64 %37\l  %39 = load i32, i32* %38, align 4\l  %40 = load i32*, i32** %3, align 8\l  %41 = load i32, i32* %6, align 4\l  %42 = sext i32 %41 to i64\l  %43 = getelementptr inbounds i32, i32* %40, i64 %42\l  store i32 %39, i32* %43, align 4\l  %44 = load i32, i32* %6, align 4\l  %45 = add nsw i32 %44, -1\l  store i32 %45, i32* %6, align 4\l  br label %19, !llvm.loop !3\l}"];
+	Node0x1910faa1430 -> Node0x1910faa1250;
+	Node0x1910faa1a70 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{%46:\l46:                                               \l  %47 = load i32, i32* %7, align 4\l  %48 = load i32*, i32** %3, align 8\l  %49 = load i32, i32* %6, align 4\l  %50 = sext i32 %49 to i64\l  %51 = getelementptr inbounds i32, i32* %48, i64 %50\l  store i32 %47, i32* %51, align 4\l  br label %52\l}"];
+	Node0x1910faa1a70 -> Node0x1910faa1480;
+	Node0x1910faa1480 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3c7b170",label="{%52:\l52:                                               \l  %53 = load i32, i32* %5, align 4\l  %54 = add nsw i32 %53, 1\l  store i32 %54, i32* %5, align 4\l  br label %8, !llvm.loop !5\l}"];
+	Node0x1910faa1480 -> Node0x1910faa1840;
+	Node0x1910faa10c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#88abfd70",label="{%55:\l55:                                               \l  %56 = load i32*, i32** %3, align 8\l  ret i32* %56\l}"];
+}

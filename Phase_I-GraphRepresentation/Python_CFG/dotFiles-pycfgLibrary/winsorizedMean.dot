@@ -1,0 +1,36 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	15	[label="0: stop"];
+	0 -> 15;
+	1	[label="1: enter: winsorizedMean(sortedElements, left, rigth)"];
+	3	[label="3: N = len(sortedElements)"];
+	1 -> 3;
+	4	[label="4: suma = 0"];
+	3 -> 4;
+	2	[label="1: exit: winsorizedMean(sortedElements, left, rigth)"];
+	14	[label="19: return mean"];
+	14 -> 2;
+	5	[label="6: for: (True if range(0, len(sortedElements)) else False)"];
+	4 -> 5;
+	6	[label="6: i = range(0, len(sortedElements)).shift()"];
+	5 -> 6;
+	7	[label="9: mean = (suma / len(sortedElements))"];
+	5 -> 7;
+	6 -> 5;
+	8	[label="10: leftElementes = sortedElements[left]"];
+	7 -> 8;
+	9	[label="12: for: (True if range(0, left) else False)"];
+	8 -> 9;
+	10	[label="12: i = range(0, left).shift()"];
+	9 -> 10;
+	11	[label="15: rigthElement = sortedElements[((N - 1) - rigth)]"];
+	9 -> 11;
+	10 -> 9;
+	12	[label="16: for: (True if range(0, rigth) else False)"];
+	11 -> 12;
+	12 -> 14;
+	13	[label="16: i = range(0, rigth).shift()"];
+	12 -> 13;
+	13 -> 12;
+}

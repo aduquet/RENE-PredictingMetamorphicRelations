@@ -1,0 +1,25 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	10	[label="0: stop"];
+	0 -> 10;
+	1	[label="1: enter: elementwise_equal(a, b)"];
+	3	[label="3: r = []"];
+	1 -> 3;
+	4	[label="5: for: (True if range(0, len(a)) else False)"];
+	3 -> 4;
+	2	[label="1: exit: elementwise_equal(a, b)"];
+	9	[label="11: return r"];
+	9 -> 2;
+	4 -> 9;
+	5	[label="5: i = range(0, len(a)).shift()"];
+	4 -> 5;
+	6	[label="6: if: (a[i] == b[i])"];
+	5 -> 6;
+	7	[label="7: r[i] = True"];
+	7 -> 4;
+	8	[label="9: r[i] = False"];
+	8 -> 4;
+	6 -> 7;
+	6 -> 8;
+}

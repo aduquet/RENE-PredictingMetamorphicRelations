@@ -1,0 +1,30 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	12	[label="0: stop"];
+	0 -> 12;
+	1	[label="1: enter: calculateAbsoluteDifferences(z)"];
+	3	[label="2: if: (z == None)"];
+	1 -> 3;
+	4	[label="3: return None"];
+	3 -> 4;
+	5	[label="5: if: (len(z) == 0)"];
+	3 -> 5;
+	2	[label="1: exit: calculateAbsoluteDifferences(z)"];
+	4 -> 2;
+	6	[label="6: return None"];
+	6 -> 2;
+	11	[label="11: return zAbs"];
+	11 -> 2;
+	5 -> 6;
+	7	[label="8: zAbs = []"];
+	5 -> 7;
+	8	[label="9: for: (True if z else False)"];
+	7 -> 8;
+	8 -> 11;
+	9	[label="9: i = z.shift()"];
+	8 -> 9;
+	10	[label="10: zAbs.append(abs(i))"];
+	9 -> 10;
+	10 -> 8;
+}

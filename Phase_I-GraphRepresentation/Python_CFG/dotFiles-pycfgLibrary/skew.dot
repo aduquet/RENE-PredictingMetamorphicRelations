@@ -1,0 +1,33 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	14	[label="0: stop"];
+	0 -> 14;
+	1	[label="4: enter: skew(data)"];
+	3	[label="6: suma = 0"];
+	1 -> 3;
+	4	[label="7: sumPD = 0"];
+	3 -> 4;
+	2	[label="4: exit: skew(data)"];
+	13	[label="22: return (moment3 / ((standardDeviation * standardDeviation) * standardDeviation))"];
+	13 -> 2;
+	5	[label="8: sumSq = 0"];
+	4 -> 5;
+	6	[label="10: for: (True if range(0, len(data)) else False)"];
+	5 -> 6;
+	7	[label="10: i = range(0, len(data)).shift()"];
+	6 -> 7;
+	8	[label="14: mean = (suma / len(data))"];
+	6 -> 8;
+	7 -> 6;
+	9	[label="15: standardDeviation = math.sqrt(((sumSq - (mean * suma)) / len(data)))"];
+	8 -> 9;
+	10	[label="17: for: (True if range(0, len(data)) else False)"];
+	9 -> 10;
+	11	[label="17: i = range(0, len(data)).shift()"];
+	10 -> 11;
+	12	[label="20: moment3 = (sumPD / len(data))"];
+	10 -> 12;
+	11 -> 10;
+	12 -> 13;
+}

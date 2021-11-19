@@ -1,0 +1,21 @@
+digraph "CFG for '_Z28calculateAbsoluteDifferencesPdi' function" {
+	label="CFG for '_Z28calculateAbsoluteDifferencesPdi' function";
+
+	Node0x2202f180940 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dedcdb70",label="{%2:\l  %3 = alloca double*, align 8\l  %4 = alloca double*, align 8\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store double* %0, double** %4, align 8\l  store i32 %1, i32* %5, align 4\l  %7 = load i32, i32* %5, align 4\l  %8 = icmp eq i32 %7, 0\l  br i1 %8, label %9, label %10\l|{<s0>T|<s1>F}}"];
+	Node0x2202f180940:s0 -> Node0x2202f180b20;
+	Node0x2202f180940:s1 -> Node0x2202f181520;
+	Node0x2202f180b20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#aec9fc70",label="{%9:\l9:                                                \l  store double* null, double** %3, align 8\l  br label %31\l}"];
+	Node0x2202f180b20 -> Node0x2202f181c00;
+	Node0x2202f181520 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070",label="{%10:\l10:                                               \l  store i32 0, i32* %6, align 4\l  br label %11\l}"];
+	Node0x2202f181520 -> Node0x2202f181890;
+	Node0x2202f181890 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%11:\l11:                                               \l  %12 = load i32, i32* %6, align 4\l  %13 = load i32, i32* %5, align 4\l  %14 = icmp slt i32 %12, %13\l  br i1 %14, label %15, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x2202f181890:s0 -> Node0x2202f180da0;
+	Node0x2202f181890:s1 -> Node0x2202f180f30;
+	Node0x2202f180da0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%15:\l15:                                               \l  %16 = load double*, double** %4, align 8\l  %17 = load i32, i32* %6, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr inbounds double, double* %16, i64 %18\l  %20 = load double, double* %19, align 8\l  %21 = fptosi double %20 to i32\l  %22 = call i32 @abs(i32 %21) #6\l  %23 = sitofp i32 %22 to double\l  %24 = load i32, i32* %6, align 4\l  %25 = sext i32 %24 to i64\l  %26 = getelementptr inbounds [100 x double], [100 x double]*\l... @_ZZ28calculateAbsoluteDifferencesPdiE4zAbs, i64 0, i64 %25\l  store double %23, double* %26, align 8\l  br label %27\l}"];
+	Node0x2202f180da0 -> Node0x2202f180fd0;
+	Node0x2202f180fd0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%27:\l27:                                               \l  %28 = load i32, i32* %6, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, i32* %6, align 4\l  br label %11, !llvm.loop !3\l}"];
+	Node0x2202f180fd0 -> Node0x2202f181890;
+	Node0x2202f180f30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c7d7f070",label="{%30:\l30:                                               \l  store double* getelementptr inbounds ([100 x double], [100 x double]*\l... @_ZZ28calculateAbsoluteDifferencesPdiE4zAbs, i64 0, i64 0), double** %3,\l... align 8\l  br label %31\l}"];
+	Node0x2202f180f30 -> Node0x2202f181c00;
+	Node0x2202f181c00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dedcdb70",label="{%31:\l31:                                               \l  %32 = load double*, double** %3, align 8\l  ret double* %32\l}"];
+}

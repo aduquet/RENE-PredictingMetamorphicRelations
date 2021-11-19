@@ -1,0 +1,18 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	7	[label="0: stop"];
+	0 -> 7;
+	1	[label="4: enter: evaluateWeightedProduct(values, weigths, begin, length)"];
+	3	[label="6: product = 1"];
+	1 -> 3;
+	4	[label="7: for: (True if range(begin, (begin + length)) else False)"];
+	3 -> 4;
+	2	[label="4: exit: evaluateWeightedProduct(values, weigths, begin, length)"];
+	6	[label="10: return product"];
+	6 -> 2;
+	4 -> 6;
+	5	[label="7: i = range(begin, (begin + length)).shift()"];
+	4 -> 5;
+	5 -> 4;
+}

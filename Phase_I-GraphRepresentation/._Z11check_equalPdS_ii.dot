@@ -1,0 +1,26 @@
+digraph "CFG for '_Z11check_equalPdS_ii' function" {
+	label="CFG for '_Z11check_equalPdS_ii' function";
+
+	Node0x2af088b1340 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70",label="{%4:\l  %5 = alloca i1, align 1\l  %6 = alloca double*, align 8\l  %7 = alloca double*, align 8\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  store double* %0, double** %6, align 8\l  store double* %1, double** %7, align 8\l  store i32 %2, i32* %8, align 4\l  store i32 %3, i32* %9, align 4\l  %11 = load i32, i32* %8, align 4\l  %12 = load i32, i32* %9, align 4\l  %13 = icmp ne i32 %11, %12\l  br i1 %13, label %14, label %15\l|{<s0>T|<s1>F}}"];
+	Node0x2af088b1340:s0 -> Node0x2af088b0940;
+	Node0x2af088b1340:s1 -> Node0x2af088b1980;
+	Node0x2af088b0940 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dbdcde70",label="{%14:\l14:                                               \l  store i1 false, i1* %5, align 1\l  br label %38\l}"];
+	Node0x2af088b0940 -> Node0x2af088b1a20;
+	Node0x2af088b1980 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dbdcde70",label="{%15:\l15:                                               \l  store i32 0, i32* %10, align 4\l  br label %16\l}"];
+	Node0x2af088b1980 -> Node0x2af088b1a70;
+	Node0x2af088b1a70 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%16:\l16:                                               \l  %17 = load i32, i32* %10, align 4\l  %18 = load i32, i32* %8, align 4\l  %19 = icmp slt i32 %17, %18\l  br i1 %19, label %20, label %37\l|{<s0>T|<s1>F}}"];
+	Node0x2af088b1a70:s0 -> Node0x2af088b1110;
+	Node0x2af088b1a70:s1 -> Node0x2af088b1160;
+	Node0x2af088b1110 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%20:\l20:                                               \l  %21 = load double*, double** %6, align 8\l  %22 = load i32, i32* %10, align 4\l  %23 = sext i32 %22 to i64\l  %24 = getelementptr inbounds double, double* %21, i64 %23\l  %25 = load double, double* %24, align 8\l  %26 = load double*, double** %7, align 8\l  %27 = load i32, i32* %10, align 4\l  %28 = sext i32 %27 to i64\l  %29 = getelementptr inbounds double, double* %26, i64 %28\l  %30 = load double, double* %29, align 8\l  %31 = fcmp une double %25, %30\l  br i1 %31, label %32, label %33\l|{<s0>T|<s1>F}}"];
+	Node0x2af088b1110:s0 -> Node0x2af088b0bc0;
+	Node0x2af088b1110:s1 -> Node0x2af088b1390;
+	Node0x2af088b0bc0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%32:\l32:                                               \l  store i1 false, i1* %5, align 1\l  br label %38\l}"];
+	Node0x2af088b0bc0 -> Node0x2af088b1a20;
+	Node0x2af088b1390 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%33:\l33:                                               \l  br label %34\l}"];
+	Node0x2af088b1390 -> Node0x2af088b1ac0;
+	Node0x2af088b1ac0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%34:\l34:                                               \l  %35 = load i32, i32* %10, align 4\l  %36 = add nsw i32 %35, 1\l  store i32 %36, i32* %10, align 4\l  br label %16, !llvm.loop !3\l}"];
+	Node0x2af088b1ac0 -> Node0x2af088b1a70;
+	Node0x2af088b1160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%37:\l37:                                               \l  store i1 true, i1* %5, align 1\l  br label %38\l}"];
+	Node0x2af088b1160 -> Node0x2af088b1a20;
+	Node0x2af088b1a20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f4c5ad70",label="{%38:\l38:                                               \l  %39 = load i1, i1* %5, align 1\l  ret i1 %39\l}"];
+}

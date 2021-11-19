@@ -1,0 +1,130 @@
+; ModuleID = 'C:\Users\duquet\Documents\GitHub\RENE-PredictingMetamorphicRelations\Methods-C++\check_equal_tolerance.cpp'
+source_filename = "C:\\Users\\duquet\\Documents\\GitHub\\RENE-PredictingMetamorphicRelations\\Methods-C++\\check_equal_tolerance.cpp"
+target datalayout = "e-m:w-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-w64-windows-gnu"
+
+%"class.std::ios_base::Init" = type { i8 }
+
+@_ZStL8__ioinit = internal global %"class.std::ios_base::Init" zeroinitializer, align 1
+@llvm.global_ctors = appending global [1 x { i32, void ()*, i8* }] [{ i32, void ()*, i8* } { i32 65535, void ()* @_GLOBAL__sub_I_check_equal_tolerance.cpp, i8* null }]
+
+; Function Attrs: noinline uwtable
+define internal void @__cxx_global_var_init() #0 {
+  call void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1) @_ZStL8__ioinit)
+  %1 = call i32 @atexit(void ()* @__dtor__ZStL8__ioinit) #3
+  ret void
+}
+
+declare dso_local void @_ZNSt8ios_base4InitC1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1)) unnamed_addr #1
+
+; Function Attrs: nounwind
+declare dso_local void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* nonnull dereferenceable(1)) unnamed_addr #2
+
+; Function Attrs: noinline uwtable
+define internal void @__dtor__ZStL8__ioinit() #0 {
+  call void @_ZNSt8ios_base4InitD1Ev(%"class.std::ios_base::Init"* @_ZStL8__ioinit)
+  ret void
+}
+
+; Function Attrs: nounwind
+declare dso_local i32 @atexit(void ()*) #3
+
+; Function Attrs: noinline nounwind optnone uwtable mustprogress
+define dso_local zeroext i1 @_Z21check_equal_tolerancePdS_dii(double* %0, double* %1, double %2, i32 %3, i32 %4) #4 {
+  %6 = alloca i1, align 1
+  %7 = alloca double*, align 8
+  %8 = alloca double*, align 8
+  %9 = alloca double, align 8
+  %10 = alloca i32, align 4
+  %11 = alloca i32, align 4
+  %12 = alloca i32, align 4
+  store double* %0, double** %7, align 8
+  store double* %1, double** %8, align 8
+  store double %2, double* %9, align 8
+  store i32 %3, i32* %10, align 4
+  store i32 %4, i32* %11, align 4
+  %13 = load i32, i32* %10, align 4
+  %14 = load i32, i32* %11, align 4
+  %15 = icmp ne i32 %13, %14
+  br i1 %15, label %16, label %17
+
+16:                                               ; preds = %5
+  store i1 false, i1* %6, align 1
+  br label %45
+
+17:                                               ; preds = %5
+  store i32 0, i32* %12, align 4
+  br label %18
+
+18:                                               ; preds = %41, %17
+  %19 = load i32, i32* %12, align 4
+  %20 = load i32, i32* %10, align 4
+  %21 = icmp slt i32 %19, %20
+  br i1 %21, label %22, label %44
+
+22:                                               ; preds = %18
+  %23 = load double*, double** %7, align 8
+  %24 = load i32, i32* %12, align 4
+  %25 = sext i32 %24 to i64
+  %26 = getelementptr inbounds double, double* %23, i64 %25
+  %27 = load double, double* %26, align 8
+  %28 = load double*, double** %8, align 8
+  %29 = load i32, i32* %12, align 4
+  %30 = sext i32 %29 to i64
+  %31 = getelementptr inbounds double, double* %28, i64 %30
+  %32 = load double, double* %31, align 8
+  %33 = fsub double %27, %32
+  %34 = fptosi double %33 to i32
+  %35 = call i32 @abs(i32 %34) #6
+  %36 = sitofp i32 %35 to double
+  %37 = load double, double* %9, align 8
+  %38 = fcmp oge double %36, %37
+  br i1 %38, label %39, label %40
+
+39:                                               ; preds = %22
+  store i1 false, i1* %6, align 1
+  br label %45
+
+40:                                               ; preds = %22
+  br label %41
+
+41:                                               ; preds = %40
+  %42 = load i32, i32* %12, align 4
+  %43 = add nsw i32 %42, 1
+  store i32 %43, i32* %12, align 4
+  br label %18, !llvm.loop !3
+
+44:                                               ; preds = %18
+  store i1 true, i1* %6, align 1
+  br label %45
+
+45:                                               ; preds = %44, %39, %16
+  %46 = load i1, i1* %6, align 1
+  ret i1 %46
+}
+
+; Function Attrs: nounwind readnone willreturn
+declare dso_local i32 @abs(i32) #5
+
+; Function Attrs: noinline uwtable
+define internal void @_GLOBAL__sub_I_check_equal_tolerance.cpp() #0 {
+  call void @__cxx_global_var_init()
+  ret void
+}
+
+attributes #0 = { noinline uwtable "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nounwind }
+attributes #4 = { noinline nounwind optnone uwtable mustprogress "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #5 = { nounwind readnone willreturn "disable-tail-calls"="false" "frame-pointer"="none" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #6 = { nounwind readnone willreturn }
+
+!llvm.module.flags = !{!0, !1}
+!llvm.ident = !{!2}
+
+!0 = !{i32 1, !"wchar_size", i32 2}
+!1 = !{i32 7, !"PIC Level", i32 2}
+!2 = !{!"clang version 12.0.1"}
+!3 = distinct !{!3, !4}
+!4 = !{!"llvm.loop.mustprogress"}

@@ -1,0 +1,5 @@
+digraph "CFG for '__dtor__ZStL8__ioinit' function" {
+	label="CFG for '__dtor__ZStL8__ioinit' function";
+
+	Node0x17b3e421020 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  call void @_ZNSt8ios_base4InitD1Ev(%\"class.std::ios_base::Init\"*\l... @_ZStL8__ioinit)\l  ret void\l}"];
+}

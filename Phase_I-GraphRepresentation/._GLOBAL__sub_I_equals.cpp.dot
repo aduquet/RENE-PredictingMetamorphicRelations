@@ -1,0 +1,5 @@
+digraph "CFG for '_GLOBAL__sub_I_equals.cpp' function" {
+	label="CFG for '_GLOBAL__sub_I_equals.cpp' function";
+
+	Node0x15a402709e0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  call void @__cxx_global_var_init()\l  ret void\l}"];
+}

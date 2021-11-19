@@ -1,0 +1,18 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	7	[label="0: stop"];
+	0 -> 7;
+	1	[label="1: enter: average(a)"];
+	3	[label="2: sum = 0"];
+	1 -> 3;
+	4	[label="3: for: (True if a else False)"];
+	3 -> 4;
+	2	[label="1: exit: average(a)"];
+	6	[label="6: return (sum / len(a))"];
+	6 -> 2;
+	4 -> 6;
+	5	[label="3: i = a.shift()"];
+	4 -> 5;
+	5 -> 4;
+}

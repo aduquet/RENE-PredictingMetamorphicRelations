@@ -1,0 +1,14 @@
+digraph "CFG for '_Z12durbinWatsonPdi' function" {
+	label="CFG for '_Z12durbinWatsonPdi' function";
+
+	Node0x2b595ad0f30 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca double*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca double, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca double, align 8\l  store double* %0, double** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store double 0.000000e+00, double* %5, align 8\l  store i32 1, i32* %6, align 4\l  br label %8\l}"];
+	Node0x2b595ad0f30 -> Node0x2b595ad0e90;
+	Node0x2b595ad0e90 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%8:\l8:                                                \l  %9 = load i32, i32* %6, align 4\l  %10 = load i32, i32* %4, align 4\l  %11 = icmp slt i32 %9, %10\l  br i1 %11, label %12, label %33\l|{<s0>T|<s1>F}}"];
+	Node0x2b595ad0e90:s0 -> Node0x2b595ad0ee0;
+	Node0x2b595ad0e90:s1 -> Node0x2b595ad14d0;
+	Node0x2b595ad0ee0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%12:\l12:                                               \l  %13 = load double*, double** %3, align 8\l  %14 = load i32, i32* %6, align 4\l  %15 = sext i32 %14 to i64\l  %16 = getelementptr inbounds double, double* %13, i64 %15\l  %17 = load double, double* %16, align 8\l  %18 = load double*, double** %3, align 8\l  %19 = load i32, i32* %6, align 4\l  %20 = sub nsw i32 %19, 1\l  %21 = sext i32 %20 to i64\l  %22 = getelementptr inbounds double, double* %18, i64 %21\l  %23 = load double, double* %22, align 8\l  %24 = fsub double %17, %23\l  store double %24, double* %7, align 8\l  %25 = load double, double* %7, align 8\l  %26 = load double, double* %7, align 8\l  %27 = fmul double %25, %26\l  %28 = load double, double* %5, align 8\l  %29 = fadd double %28, %27\l  store double %29, double* %5, align 8\l  br label %30\l}"];
+	Node0x2b595ad0ee0 -> Node0x2b595ad1070;
+	Node0x2b595ad1070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%30:\l30:                                               \l  %31 = load i32, i32* %6, align 4\l  %32 = add nsw i32 %31, 1\l  store i32 %32, i32* %6, align 4\l  br label %8, !llvm.loop !3\l}"];
+	Node0x2b595ad1070 -> Node0x2b595ad0e90;
+	Node0x2b595ad14d0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%33:\l33:                                               \l  %34 = load double, double* %5, align 8\l  ret double %34\l}"];
+}

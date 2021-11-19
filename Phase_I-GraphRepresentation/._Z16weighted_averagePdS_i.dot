@@ -1,0 +1,14 @@
+digraph "CFG for '_Z16weighted_averagePdS_i' function" {
+	label="CFG for '_Z16weighted_averagePdS_i' function";
+
+	Node0x1632b850ee0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%3:\l  %4 = alloca double*, align 8\l  %5 = alloca double*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca double, align 8\l  %8 = alloca double, align 8\l  %9 = alloca i32, align 4\l  store double* %0, double** %4, align 8\l  store double* %1, double** %5, align 8\l  store i32 %2, i32* %6, align 4\l  store double 0.000000e+00, double* %7, align 8\l  store double 0.000000e+00, double* %8, align 8\l  store i32 0, i32* %9, align 4\l  br label %10\l}"];
+	Node0x1632b850ee0 -> Node0x1632b851b60;
+	Node0x1632b851b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%10:\l10:                                               \l  %11 = load i32, i32* %9, align 4\l  %12 = load i32, i32* %6, align 4\l  %13 = icmp slt i32 %11, %12\l  br i1 %13, label %14, label %38\l|{<s0>T|<s1>F}}"];
+	Node0x1632b851b60:s0 -> Node0x1632b850f30;
+	Node0x1632b851b60:s1 -> Node0x1632b851200;
+	Node0x1632b850f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%14:\l14:                                               \l  %15 = load double*, double** %4, align 8\l  %16 = load i32, i32* %9, align 4\l  %17 = sext i32 %16 to i64\l  %18 = getelementptr inbounds double, double* %15, i64 %17\l  %19 = load double, double* %18, align 8\l  %20 = load double*, double** %5, align 8\l  %21 = load i32, i32* %9, align 4\l  %22 = sext i32 %21 to i64\l  %23 = getelementptr inbounds double, double* %20, i64 %22\l  %24 = load double, double* %23, align 8\l  %25 = fmul double %19, %24\l  %26 = load double, double* %7, align 8\l  %27 = fadd double %26, %25\l  store double %27, double* %7, align 8\l  %28 = load double*, double** %5, align 8\l  %29 = load i32, i32* %9, align 4\l  %30 = sext i32 %29 to i64\l  %31 = getelementptr inbounds double, double* %28, i64 %30\l  %32 = load double, double* %31, align 8\l  %33 = load double, double* %8, align 8\l  %34 = fadd double %33, %32\l  store double %34, double* %8, align 8\l  br label %35\l}"];
+	Node0x1632b850f30 -> Node0x1632b851070;
+	Node0x1632b851070 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%35:\l35:                                               \l  %36 = load i32, i32* %9, align 4\l  %37 = add nsw i32 %36, 1\l  store i32 %37, i32* %9, align 4\l  br label %10, !llvm.loop !3\l}"];
+	Node0x1632b851070 -> Node0x1632b851b60;
+	Node0x1632b851200 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%38:\l38:                                               \l  %39 = load double, double* %7, align 8\l  %40 = load double, double* %8, align 8\l  %41 = fdiv double %39, %40\l  ret double %41\l}"];
+}

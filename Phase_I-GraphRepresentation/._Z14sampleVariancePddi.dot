@@ -1,0 +1,12 @@
+digraph "CFG for '_Z14sampleVariancePddi' function" {
+	label="CFG for '_Z14sampleVariancePddi' function";
+
+	Node0x1d5599b1160 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%3:\l  %4 = alloca double*, align 8\l  %5 = alloca double, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  %8 = alloca double, align 8\l  %9 = alloca i32, align 4\l  %10 = alloca double, align 8\l  store double* %0, double** %4, align 8\l  store double %1, double* %5, align 8\l  store i32 %2, i32* %6, align 4\l  %11 = load i32, i32* %6, align 4\l  store i32 %11, i32* %7, align 4\l  store double 0.000000e+00, double* %8, align 8\l  %12 = load i32, i32* %7, align 4\l  store i32 %12, i32* %9, align 4\l  br label %13\l}"];
+	Node0x1d5599b1160 -> Node0x1d5599b1b60;
+	Node0x1d5599b1b60 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%13:\l13:                                               \l  %14 = load i32, i32* %9, align 4\l  %15 = add nsw i32 %14, -1\l  store i32 %15, i32* %9, align 4\l  %16 = icmp sge i32 %15, 0\l  br i1 %16, label %17, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x1d5599b1b60:s0 -> Node0x1d5599b0bc0;
+	Node0x1d5599b1b60:s1 -> Node0x1d5599b1a20;
+	Node0x1d5599b0bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%17:\l17:                                               \l  %18 = load double*, double** %4, align 8\l  %19 = load i32, i32* %9, align 4\l  %20 = sext i32 %19 to i64\l  %21 = getelementptr inbounds double, double* %18, i64 %20\l  %22 = load double, double* %21, align 8\l  %23 = load double, double* %5, align 8\l  %24 = fsub double %22, %23\l  store double %24, double* %10, align 8\l  %25 = load double, double* %10, align 8\l  %26 = load double, double* %10, align 8\l  %27 = fmul double %25, %26\l  %28 = load double, double* %8, align 8\l  %29 = fadd double %28, %27\l  store double %29, double* %8, align 8\l  br label %13, !llvm.loop !3\l}"];
+	Node0x1d5599b0bc0 -> Node0x1d5599b1b60;
+	Node0x1d5599b1a20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%30:\l30:                                               \l  %31 = load double, double* %8, align 8\l  %32 = load i32, i32* %7, align 4\l  %33 = sub nsw i32 %32, 1\l  %34 = sitofp i32 %33 to double\l  %35 = fdiv double %31, %34\l  ret double %35\l}"];
+}

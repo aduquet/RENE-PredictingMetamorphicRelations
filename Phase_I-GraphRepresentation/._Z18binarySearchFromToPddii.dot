@@ -1,0 +1,28 @@
+digraph "CFG for '_Z18binarySearchFromToPddii' function" {
+	label="CFG for '_Z18binarySearchFromToPddii' function";
+
+	Node0x220fe581070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dedcdb70",label="{%4:\l  %5 = alloca i32, align 4\l  %6 = alloca double*, align 8\l  %7 = alloca double, align 8\l  %8 = alloca i32, align 4\l  %9 = alloca i32, align 4\l  %10 = alloca i32, align 4\l  %11 = alloca i32, align 4\l  %12 = alloca i32, align 4\l  %13 = alloca double, align 8\l  store double* %0, double** %6, align 8\l  store double %1, double* %7, align 8\l  store i32 %2, i32* %8, align 4\l  store i32 %3, i32* %9, align 4\l  %14 = load i32, i32* %8, align 4\l  store i32 %14, i32* %10, align 4\l  %15 = load i32, i32* %9, align 4\l  store i32 %15, i32* %11, align 4\l  br label %16\l}"];
+	Node0x220fe581070 -> Node0x220fe581bb0;
+	Node0x220fe581bb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%16:\l16:                                               \l  %17 = load i32, i32* %10, align 4\l  %18 = load i32, i32* %11, align 4\l  %19 = icmp sle i32 %17, %18\l  br i1 %19, label %20, label %47\l|{<s0>T|<s1>F}}"];
+	Node0x220fe581bb0:s0 -> Node0x220fe581b10;
+	Node0x220fe581bb0:s1 -> Node0x220fe581ca0;
+	Node0x220fe581b10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%20:\l20:                                               \l  %21 = load i32, i32* %10, align 4\l  %22 = load i32, i32* %11, align 4\l  %23 = add nsw i32 %21, %22\l  %24 = sdiv i32 %23, 2\l  store i32 %24, i32* %12, align 4\l  %25 = load double*, double** %6, align 8\l  %26 = load i32, i32* %12, align 4\l  %27 = sext i32 %26 to i64\l  %28 = getelementptr inbounds double, double* %25, i64 %27\l  %29 = load double, double* %28, align 8\l  store double %29, double* %13, align 8\l  %30 = load double, double* %13, align 8\l  %31 = load double, double* %7, align 8\l  %32 = fcmp olt double %30, %31\l  br i1 %32, label %33, label %36\l|{<s0>T|<s1>F}}"];
+	Node0x220fe581b10:s0 -> Node0x220fe580fd0;
+	Node0x220fe581b10:s1 -> Node0x220fe581840;
+	Node0x220fe580fd0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70",label="{%33:\l33:                                               \l  %34 = load i32, i32* %12, align 4\l  %35 = add nsw i32 %34, 1\l  store i32 %35, i32* %10, align 4\l  br label %46\l}"];
+	Node0x220fe580fd0 -> Node0x220fe580c10;
+	Node0x220fe581840 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70",label="{%36:\l36:                                               \l  %37 = load double, double* %13, align 8\l  %38 = load double, double* %7, align 8\l  %39 = fcmp ogt double %37, %38\l  br i1 %39, label %40, label %43\l|{<s0>T|<s1>F}}"];
+	Node0x220fe581840:s0 -> Node0x220fe580b20;
+	Node0x220fe581840:s1 -> Node0x220fe580e40;
+	Node0x220fe580b20 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70",label="{%40:\l40:                                               \l  %41 = load i32, i32* %12, align 4\l  %42 = sub nsw i32 %41, 1\l  store i32 %42, i32* %11, align 4\l  br label %45\l}"];
+	Node0x220fe580b20 -> Node0x220fe581750;
+	Node0x220fe580e40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#abc8fd70",label="{%43:\l43:                                               \l  %44 = load i32, i32* %12, align 4\l  store i32 %44, i32* %5, align 4\l  br label %51\l}"];
+	Node0x220fe580e40 -> Node0x220fe580cb0;
+	Node0x220fe581750 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70",label="{%45:\l45:                                               \l  br label %46\l}"];
+	Node0x220fe581750 -> Node0x220fe580c10;
+	Node0x220fe580c10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%46:\l46:                                               \l  br label %16, !llvm.loop !3\l}"];
+	Node0x220fe580c10 -> Node0x220fe581bb0;
+	Node0x220fe581ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#cedaeb70",label="{%47:\l47:                                               \l  %48 = load i32, i32* %10, align 4\l  %49 = add nsw i32 %48, 1\l  %50 = sub nsw i32 0, %49\l  store i32 %50, i32* %5, align 4\l  br label %51\l}"];
+	Node0x220fe581ca0 -> Node0x220fe580cb0;
+	Node0x220fe580cb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dedcdb70",label="{%51:\l51:                                               \l  %52 = load i32, i32* %5, align 4\l  ret i32 %52\l}"];
+}

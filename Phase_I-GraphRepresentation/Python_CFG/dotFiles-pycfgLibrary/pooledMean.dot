@@ -1,0 +1,29 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	12	[label="0: stop"];
+	0 -> 12;
+	1	[label="1: enter: pooledMean(data1, data2)"];
+	3	[label="2: sum1 = 0"];
+	1 -> 3;
+	4	[label="3: for: (True if range(0, len(data1)) else False)"];
+	3 -> 4;
+	2	[label="1: exit: pooledMean(data1, data2)"];
+	11	[label="14: return (((len(data1) * mean1) + (len(data2) * mean2)) / (len(data1) + len(data2)))"];
+	11 -> 2;
+	5	[label="3: i = range(0, len(data1)).shift()"];
+	4 -> 5;
+	6	[label="6: mean1 = (sum1 / len(data1))"];
+	4 -> 6;
+	5 -> 4;
+	7	[label="8: sum2 = 0"];
+	6 -> 7;
+	8	[label="9: for: (True if range(0, len(data2)) else False)"];
+	7 -> 8;
+	9	[label="9: i = range(0, len(data2)).shift()"];
+	8 -> 9;
+	10	[label="12: mean2 = (sum2 / len(data2))"];
+	8 -> 10;
+	9 -> 8;
+	10 -> 11;
+}

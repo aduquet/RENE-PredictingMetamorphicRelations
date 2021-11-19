@@ -1,0 +1,14 @@
+digraph "CFG for '_Z6squarePdi' function" {
+	label="CFG for '_Z6squarePdi' function";
+
+	Node0x19dd25a1520 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca double*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  store double* %0, double** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store i32 0, i32* %5, align 4\l  br label %6\l}"];
+	Node0x19dd25a1520 -> Node0x19dd25a1110;
+	Node0x19dd25a1110 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%6:\l6:                                                \l  %7 = load i32, i32* %5, align 4\l  %8 = load i32, i32* %4, align 4\l  %9 = icmp slt i32 %7, %8\l  br i1 %9, label %10, label %29\l|{<s0>T|<s1>F}}"];
+	Node0x19dd25a1110:s0 -> Node0x19dd25a0bc0;
+	Node0x19dd25a1110:s1 -> Node0x19dd25a0cb0;
+	Node0x19dd25a0bc0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%10:\l10:                                               \l  %11 = load double*, double** %3, align 8\l  %12 = load i32, i32* %5, align 4\l  %13 = sext i32 %12 to i64\l  %14 = getelementptr inbounds double, double* %11, i64 %13\l  %15 = load double, double* %14, align 8\l  %16 = load double*, double** %3, align 8\l  %17 = load i32, i32* %5, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr inbounds double, double* %16, i64 %18\l  %20 = load double, double* %19, align 8\l  %21 = fmul double %15, %20\l  %22 = load double*, double** %3, align 8\l  %23 = load i32, i32* %5, align 4\l  %24 = sext i32 %23 to i64\l  %25 = getelementptr inbounds double, double* %22, i64 %24\l  store double %21, double* %25, align 8\l  br label %26\l}"];
+	Node0x19dd25a0bc0 -> Node0x19dd25a1840;
+	Node0x19dd25a1840 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%26:\l26:                                               \l  %27 = load i32, i32* %5, align 4\l  %28 = add nsw i32 %27, 1\l  store i32 %28, i32* %5, align 4\l  br label %6, !llvm.loop !3\l}"];
+	Node0x19dd25a1840 -> Node0x19dd25a1110;
+	Node0x19dd25a0cb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%29:\l29:                                               \l  %30 = load double*, double** %3, align 8\l  ret double* %30\l}"];
+}

@@ -1,0 +1,28 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	12	[label="0: stop"];
+	0 -> 12;
+	1	[label="1: enter: covariance(elements1, elements2)"];
+	3	[label="2: size = len(elements1)"];
+	1 -> 3;
+	4	[label="3: sumx = elements1[0]"];
+	3 -> 4;
+	2	[label="1: exit: covariance(elements1, elements2)"];
+	11	[label="15: return (sxy / (size - 1))"];
+	11 -> 2;
+	5	[label="4: sumy = elements2[0]"];
+	4 -> 5;
+	6	[label="5: sxy = 0"];
+	5 -> 6;
+	7	[label="7: for: (True if range(0, size) else False)"];
+	6 -> 7;
+	7 -> 11;
+	8	[label="7: i = range(0, size).shift()"];
+	7 -> 8;
+	9	[label="8: x = elements1[i]"];
+	8 -> 9;
+	10	[label="9: y = elements2[i]"];
+	10 -> 7;
+	9 -> 10;
+}

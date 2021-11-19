@@ -1,0 +1,20 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	8	[label="0: stop"];
+	0 -> 8;
+	1	[label="4: enter: distanceInf(p1, p2)"];
+	3	[label="5: max = 0"];
+	1 -> 3;
+	4	[label="6: for: (True if range(0, len(p1)) else False)"];
+	3 -> 4;
+	2	[label="4: exit: distanceInf(p1, p2)"];
+	7	[label="9: return max"];
+	7 -> 2;
+	4 -> 7;
+	5	[label="6: i = range(0, len(p1)).shift()"];
+	4 -> 5;
+	6	[label="7: max = np.maximum(max, abs((p1[i] - p2[i])))"];
+	5 -> 6;
+	6 -> 4;
+}

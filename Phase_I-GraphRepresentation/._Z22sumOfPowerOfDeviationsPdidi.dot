@@ -1,0 +1,14 @@
+digraph "CFG for '_Z22sumOfPowerOfDeviationsPdidi' function" {
+	label="CFG for '_Z22sumOfPowerOfDeviationsPdidi' function";
+
+	Node0x170e4870cb0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%4:\l  %5 = alloca double*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca double, align 8\l  %8 = alloca i32, align 4\l  %9 = alloca double, align 8\l  %10 = alloca i32, align 4\l  store double* %0, double** %5, align 8\l  store i32 %1, i32* %6, align 4\l  store double %2, double* %7, align 8\l  store i32 %3, i32* %8, align 4\l  store double 0.000000e+00, double* %9, align 8\l  store i32 0, i32* %10, align 4\l  br label %11\l}"];
+	Node0x170e4870cb0 -> Node0x170e4871bb0;
+	Node0x170e4871bb0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%11:\l11:                                               \l  %12 = load i32, i32* %10, align 4\l  %13 = load i32, i32* %8, align 4\l  %14 = icmp slt i32 %12, %13\l  br i1 %14, label %15, label %30\l|{<s0>T|<s1>F}}"];
+	Node0x170e4871bb0:s0 -> Node0x170e4871480;
+	Node0x170e4871bb0:s1 -> Node0x170e4871c00;
+	Node0x170e4871480 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%15:\l15:                                               \l  %16 = load double*, double** %5, align 8\l  %17 = load i32, i32* %10, align 4\l  %18 = sext i32 %17 to i64\l  %19 = getelementptr inbounds double, double* %16, i64 %18\l  %20 = load double, double* %19, align 8\l  %21 = load double, double* %7, align 8\l  %22 = fsub double %20, %21\l  %23 = load i32, i32* %6, align 4\l  %24 = call double\l... @_ZSt3powIdiEN9__gnu_cxx11__promote_2IT_T0_NS0_9__promoteIS2_Xsr3std12__is_int\l...egerIS2_EE7__valueEE6__typeENS4_IS3_Xsr3std12__is_integerIS3_EE7__valueEE6__typ\l...eEE6__typeES2_S3_(double %22, i32 %23)\l  %25 = load double, double* %9, align 8\l  %26 = fadd double %25, %24\l  store double %26, double* %9, align 8\l  br label %27\l}"];
+	Node0x170e4871480 -> Node0x170e48711b0;
+	Node0x170e48711b0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%27:\l27:                                               \l  %28 = load i32, i32* %10, align 4\l  %29 = add nsw i32 %28, 1\l  store i32 %29, i32* %10, align 4\l  br label %11, !llvm.loop !3\l}"];
+	Node0x170e48711b0 -> Node0x170e4871bb0;
+	Node0x170e4871c00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%30:\l30:                                               \l  %31 = load double, double* %9, align 8\l  ret double %31\l}"];
+}

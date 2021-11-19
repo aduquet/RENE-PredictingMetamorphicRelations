@@ -1,0 +1,14 @@
+digraph "CFG for '_Z12harmonicMeanPdi' function" {
+	label="CFG for '_Z12harmonicMeanPdi' function";
+
+	Node0x2b2536c0ad0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca double*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca double, align 8\l  %6 = alloca i32, align 4\l  store double* %0, double** %3, align 8\l  store i32 %1, i32* %4, align 4\l  store double 0.000000e+00, double* %5, align 8\l  store i32 0, i32* %6, align 4\l  br label %7\l}"];
+	Node0x2b2536c0ad0 -> Node0x2b2536c0c10;
+	Node0x2b2536c0c10 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%7:\l7:                                                \l  %8 = load i32, i32* %6, align 4\l  %9 = load i32, i32* %4, align 4\l  %10 = icmp slt i32 %8, %9\l  br i1 %10, label %11, label %23\l|{<s0>T|<s1>F}}"];
+	Node0x2b2536c0c10:s0 -> Node0x2b2536c0f30;
+	Node0x2b2536c0c10:s1 -> Node0x2b2536c1ca0;
+	Node0x2b2536c0f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%11:\l11:                                               \l  %12 = load double*, double** %3, align 8\l  %13 = load i32, i32* %6, align 4\l  %14 = sext i32 %13 to i64\l  %15 = getelementptr inbounds double, double* %12, i64 %14\l  %16 = load double, double* %15, align 8\l  %17 = fdiv double 1.000000e+00, %16\l  %18 = load double, double* %5, align 8\l  %19 = fadd double %18, %17\l  store double %19, double* %5, align 8\l  br label %20\l}"];
+	Node0x2b2536c0f30 -> Node0x2b2536c1840;
+	Node0x2b2536c1840 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%20:\l20:                                               \l  %21 = load i32, i32* %6, align 4\l  %22 = add nsw i32 %21, 1\l  store i32 %22, i32* %6, align 4\l  br label %7, !llvm.loop !3\l}"];
+	Node0x2b2536c1840 -> Node0x2b2536c0c10;
+	Node0x2b2536c1ca0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%23:\l23:                                               \l  %24 = load i32, i32* %4, align 4\l  %25 = sitofp i32 %24 to double\l  %26 = load double, double* %5, align 8\l  %27 = fdiv double %25, %26\l  ret double %27\l}"];
+}

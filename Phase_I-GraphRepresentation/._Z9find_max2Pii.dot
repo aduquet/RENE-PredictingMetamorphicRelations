@@ -1,0 +1,19 @@
+digraph "CFG for '_Z9find_max2Pii' function" {
+	label="CFG for '_Z9find_max2Pii' function";
+
+	Node0x1a4d31016b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%2:\l  %3 = alloca i32*, align 8\l  %4 = alloca i32, align 4\l  %5 = alloca i32, align 4\l  %6 = alloca i32, align 4\l  store i32* %0, i32** %3, align 8\l  store i32 %1, i32* %4, align 4\l  %7 = load i32*, i32** %3, align 8\l  %8 = getelementptr inbounds i32, i32* %7, i64 0\l  %9 = load i32, i32* %8, align 4\l  %10 = load i32*, i32** %3, align 8\l  %11 = getelementptr inbounds i32, i32* %10, i64 1\l  %12 = load i32, i32* %11, align 4\l  %13 = add nsw i32 %9, %12\l  store i32 %13, i32* %5, align 4\l  store i32 0, i32* %6, align 4\l  br label %14\l}"];
+	Node0x1a4d31016b0 -> Node0x1a4d3101c50;
+	Node0x1a4d3101c50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%14:\l14:                                               \l  %15 = load i32, i32* %6, align 4\l  %16 = load i32, i32* %4, align 4\l  %17 = sub nsw i32 %16, 1\l  %18 = icmp slt i32 %15, %17\l  br i1 %18, label %19, label %51\l|{<s0>T|<s1>F}}"];
+	Node0x1a4d3101c50:s0 -> Node0x1a4d3100a30;
+	Node0x1a4d3101c50:s1 -> Node0x1a4d3101070;
+	Node0x1a4d3100a30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%19:\l19:                                               \l  %20 = load i32*, i32** %3, align 8\l  %21 = load i32, i32* %6, align 4\l  %22 = sext i32 %21 to i64\l  %23 = getelementptr inbounds i32, i32* %20, i64 %22\l  %24 = load i32, i32* %23, align 4\l  %25 = load i32*, i32** %3, align 8\l  %26 = load i32, i32* %6, align 4\l  %27 = add nsw i32 %26, 1\l  %28 = sext i32 %27 to i64\l  %29 = getelementptr inbounds i32, i32* %25, i64 %28\l  %30 = load i32, i32* %29, align 4\l  %31 = add nsw i32 %24, %30\l  %32 = load i32, i32* %5, align 4\l  %33 = icmp sgt i32 %31, %32\l  br i1 %33, label %34, label %47\l|{<s0>T|<s1>F}}"];
+	Node0x1a4d3100a30:s0 -> Node0x1a4d3100df0;
+	Node0x1a4d3100a30:s1 -> Node0x1a4d3100990;
+	Node0x1a4d3100df0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%34:\l34:                                               \l  %35 = load i32*, i32** %3, align 8\l  %36 = load i32, i32* %6, align 4\l  %37 = sext i32 %36 to i64\l  %38 = getelementptr inbounds i32, i32* %35, i64 %37\l  %39 = load i32, i32* %38, align 4\l  %40 = load i32*, i32** %3, align 8\l  %41 = load i32, i32* %6, align 4\l  %42 = add nsw i32 %41, 1\l  %43 = sext i32 %42 to i64\l  %44 = getelementptr inbounds i32, i32* %40, i64 %43\l  %45 = load i32, i32* %44, align 4\l  %46 = add nsw i32 %39, %45\l  store i32 %46, i32* %5, align 4\l  br label %47\l}"];
+	Node0x1a4d3100df0 -> Node0x1a4d3100990;
+	Node0x1a4d3100990 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%47:\l47:                                               \l  br label %48\l}"];
+	Node0x1a4d3100990 -> Node0x1a4d3100b20;
+	Node0x1a4d3100b20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%48:\l48:                                               \l  %49 = load i32, i32* %6, align 4\l  %50 = add nsw i32 %49, 1\l  store i32 %50, i32* %6, align 4\l  br label %14, !llvm.loop !3\l}"];
+	Node0x1a4d3100b20 -> Node0x1a4d3101c50;
+	Node0x1a4d3101070 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%51:\l51:                                               \l  %52 = load i32, i32* %5, align 4\l  ret i32 %52\l}"];
+}

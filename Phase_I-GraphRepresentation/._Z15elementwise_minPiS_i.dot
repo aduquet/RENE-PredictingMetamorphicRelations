@@ -1,0 +1,21 @@
+digraph "CFG for '_Z15elementwise_minPiS_i' function" {
+	label="CFG for '_Z15elementwise_minPiS_i' function";
+
+	Node0x284563e0990 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%3:\l  %4 = alloca i32*, align 8\l  %5 = alloca i32*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i32* %0, i32** %4, align 8\l  store i32* %1, i32** %5, align 8\l  store i32 %2, i32* %6, align 4\l  store i32 0, i32* %7, align 4\l  br label %8\l}"];
+	Node0x284563e0990 -> Node0x284563e0d50;
+	Node0x284563e0d50 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%8:\l8:                                                \l  %9 = load i32, i32* %7, align 4\l  %10 = load i32, i32* %6, align 4\l  %11 = icmp slt i32 %9, %10\l  br i1 %11, label %12, label %46\l|{<s0>T|<s1>F}}"];
+	Node0x284563e0d50:s0 -> Node0x284563e1250;
+	Node0x284563e0d50:s1 -> Node0x284563e0d00;
+	Node0x284563e1250 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%12:\l12:                                               \l  %13 = load i32*, i32** %4, align 8\l  %14 = load i32, i32* %7, align 4\l  %15 = sext i32 %14 to i64\l  %16 = getelementptr inbounds i32, i32* %13, i64 %15\l  %17 = load i32, i32* %16, align 4\l  %18 = load i32*, i32** %5, align 8\l  %19 = load i32, i32* %7, align 4\l  %20 = sext i32 %19 to i64\l  %21 = getelementptr inbounds i32, i32* %18, i64 %20\l  %22 = load i32, i32* %21, align 4\l  %23 = icmp slt i32 %17, %22\l  br i1 %23, label %24, label %33\l|{<s0>T|<s1>F}}"];
+	Node0x284563e1250:s0 -> Node0x284563e1340;
+	Node0x284563e1250:s1 -> Node0x284563e0da0;
+	Node0x284563e1340 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%24:\l24:                                               \l  %25 = load i32*, i32** %4, align 8\l  %26 = load i32, i32* %7, align 4\l  %27 = sext i32 %26 to i64\l  %28 = getelementptr inbounds i32, i32* %25, i64 %27\l  %29 = load i32, i32* %28, align 4\l  %30 = load i32, i32* %7, align 4\l  %31 = sext i32 %30 to i64\l  %32 = getelementptr inbounds [1000 x i32], [1000 x i32]*\l... @_ZZ15elementwise_minPiS_iE1r, i64 0, i64 %31\l  store i32 %29, i32* %32, align 4\l  br label %42\l}"];
+	Node0x284563e1340 -> Node0x284563e0e40;
+	Node0x284563e0da0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e1675170",label="{%33:\l33:                                               \l  %34 = load i32*, i32** %5, align 8\l  %35 = load i32, i32* %7, align 4\l  %36 = sext i32 %35 to i64\l  %37 = getelementptr inbounds i32, i32* %34, i64 %36\l  %38 = load i32, i32* %37, align 4\l  %39 = load i32, i32* %7, align 4\l  %40 = sext i32 %39 to i64\l  %41 = getelementptr inbounds [1000 x i32], [1000 x i32]*\l... @_ZZ15elementwise_minPiS_iE1r, i64 0, i64 %40\l  store i32 %38, i32* %41, align 4\l  br label %42\l}"];
+	Node0x284563e0da0 -> Node0x284563e0e40;
+	Node0x284563e0e40 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%42:\l42:                                               \l  br label %43\l}"];
+	Node0x284563e0e40 -> Node0x284563e0f30;
+	Node0x284563e0f30 [shape=record,color="#b70d28ff", style=filled, fillcolor="#bb1b2c70",label="{%43:\l43:                                               \l  %44 = load i32, i32* %7, align 4\l  %45 = add nsw i32 %44, 1\l  store i32 %45, i32* %7, align 4\l  br label %8, !llvm.loop !3\l}"];
+	Node0x284563e0f30 -> Node0x284563e0d50;
+	Node0x284563e0d00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#b9d0f970",label="{%46:\l46:                                               \l  ret i32* getelementptr inbounds ([1000 x i32], [1000 x i32]*\l... @_ZZ15elementwise_minPiS_iE1r, i64 0, i64 0)\l}"];
+}

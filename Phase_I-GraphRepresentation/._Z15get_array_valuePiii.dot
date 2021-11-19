@@ -1,0 +1,15 @@
+digraph "CFG for '_Z15get_array_valuePiii' function" {
+	label="CFG for '_Z15get_array_valuePiii' function";
+
+	Node0x1eea46508f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%3:\l  %4 = alloca i32, align 4\l  %5 = alloca i32*, align 8\l  %6 = alloca i32, align 4\l  %7 = alloca i32, align 4\l  store i32* %0, i32** %5, align 8\l  store i32 %1, i32* %6, align 4\l  store i32 %2, i32* %7, align 4\l  %8 = load i32, i32* %6, align 4\l  %9 = sub nsw i32 %8, 1\l  %10 = load i32, i32* %7, align 4\l  %11 = icmp sge i32 %9, %10\l  br i1 %11, label %16, label %12\l|{<s0>T|<s1>F}}"];
+	Node0x1eea46508f0:s0 -> Node0x1eea4651750;
+	Node0x1eea46508f0:s1 -> Node0x1eea4651020;
+	Node0x1eea4651020 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f3947570",label="{%12:\l12:                                               \l  %13 = load i32, i32* %6, align 4\l  %14 = sub nsw i32 %13, 1\l  %15 = icmp slt i32 %14, 0\l  br i1 %15, label %16, label %17\l|{<s0>T|<s1>F}}"];
+	Node0x1eea4651020:s0 -> Node0x1eea4651750;
+	Node0x1eea4651020:s1 -> Node0x1eea46516b0;
+	Node0x1eea4651750 [shape=record,color="#b70d28ff", style=filled, fillcolor="#de614d70",label="{%16:\l16:                                               \l  store i32 -100000, i32* %4, align 4\l  br label %24\l}"];
+	Node0x1eea4651750 -> Node0x1eea4650a80;
+	Node0x1eea46516b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#f6bfa670",label="{%17:\l17:                                               \l  %18 = load i32*, i32** %5, align 8\l  %19 = load i32, i32* %6, align 4\l  %20 = sub nsw i32 %19, 1\l  %21 = sext i32 %20 to i64\l  %22 = getelementptr inbounds i32, i32* %18, i64 %21\l  %23 = load i32, i32* %22, align 4\l  store i32 %23, i32* %4, align 4\l  br label %24\l}"];
+	Node0x1eea46516b0 -> Node0x1eea4650a80;
+	Node0x1eea4650a80 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%24:\l24:                                               \l  %25 = load i32, i32* %4, align 4\l  ret i32 %25\l}"];
+}

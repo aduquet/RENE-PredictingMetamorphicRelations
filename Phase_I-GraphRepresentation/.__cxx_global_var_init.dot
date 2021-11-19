@@ -1,0 +1,5 @@
+digraph "CFG for '__cxx_global_var_init' function" {
+	label="CFG for '__cxx_global_var_init' function";
+
+	Node0x17b3e421750 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  call void @_ZNSt8ios_base4InitC1Ev(%\"class.std::ios_base::Init\"* nonnull\l... dereferenceable(1) @_ZStL8__ioinit)\l  %1 = call i32 @atexit(void ()* @__dtor__ZStL8__ioinit) #3\l  ret void\l}"];
+}

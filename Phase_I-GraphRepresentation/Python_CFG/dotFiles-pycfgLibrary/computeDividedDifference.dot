@@ -1,0 +1,33 @@
+strict digraph "" {
+	node [label="\N"];
+	0	[label="0: start"];
+	14	[label="0: stop"];
+	0 -> 14;
+	1	[label="1: enter: computeDividedDifference(x, y)"];
+	3	[label="2: divdiff = y.copy()"];
+	1 -> 3;
+	4	[label="3: n = len(x)"];
+	3 -> 4;
+	2	[label="1: exit: computeDividedDifference(x, y)"];
+	13	[label="12: return a"];
+	13 -> 2;
+	5	[label="4: a = [divdiff[0]]"];
+	4 -> 5;
+	6	[label="6: for: (True if range(1, n) else False)"];
+	5 -> 6;
+	6 -> 13;
+	7	[label="6: i = range(1, n).shift()"];
+	6 -> 7;
+	8	[label="7: for: (True if range(0, (n - i)) else False)"];
+	7 -> 8;
+	12	[label="11: a[i] = divdiff[0]"];
+	12 -> 6;
+	8 -> 12;
+	9	[label="7: j = range(0, (n - i)).shift()"];
+	8 -> 9;
+	10	[label="8: denominator = (x[(j + i)] - x[j])"];
+	9 -> 10;
+	11	[label="9: divdiff[j] = (divdiff[(j + 1)] - (divdiff[j] / denominator))"];
+	11 -> 8;
+	10 -> 11;
+}
