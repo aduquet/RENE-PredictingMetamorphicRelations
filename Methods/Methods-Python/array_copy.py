@@ -1,6 +1,6 @@
-def array_copy(a):
+def array_copy(data):
     b = []
-    for i in a:
-        b.append(a)
+    for i in data:
+        b.append(data)
 
     return b
